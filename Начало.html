@@ -19,6 +19,7 @@
     
     
     
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -89,7 +90,63 @@
         </p>
       </div>
     </section>
-    <section class="u-align-center u-clearfix u-grey-75 u-section-2" src="" id="sec-aac5">
+    <section class="u-align-center u-clearfix u-grey-75 u-section-2" id="sec-2401">
+      <div class="u-align-left u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Време оставащо до завършване!</h3>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <p id = "days" class="u-align-center u-text u-text-2">00</p>
+                <h3 class="u-align-center u-text u-text-default u-text-3">Дни</h3>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <p id ="hours" class="u-align-center u-text u-text-4">00</p>
+                <h3 class="u-align-center u-text u-text-default u-text-5">Часове</h3>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <p id ="minutes" class="u-align-center u-text u-text-6">00</p>
+                <h3 class="u-align-center u-text u-text-default u-text-7">Минути</h3>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-4">
+                <p id ="secs" class="u-align-center u-text u-text-8">00</p>
+                <h3 class="u-align-center u-text u-text-default u-text-9">Секунди</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+<script>
+	
+	var countDownDate = new Date("Dec 11, 2022 00:00:00").getTimer();
+	var x = setInterval(function(){
+		var now = new Date().getTime();
+		var distance = countDownDate - now
+	},1000);
+
+
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	document.getElementById("days").innerHTML = days;
+	document.getElementById("hours").innerHTML = hours;
+	document.getElementById("minutes").innerHTML = minutes;
+	document.getElementById("secs").innerHTML = seconds;
+	
+	
+</script>
+	
+    <section class="u-align-center u-clearfix u-grey-75 u-section-3" src="" id="sec-aac5">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-title u-text-1">Поканени учители</h1>
         <p class="u-large-text u-text u-text-variant u-text-2">Ако не сте в този списък, не се сърдете моля!</p>
@@ -104,27 +161,27 @@
         <li data-u-target="#carousel_d79f" class="u-active-custom-color-1 u-grey-30" data-u-slide-to="4"></li>
       </ol>
       <div class="u-carousel-inner" role="listbox">
-        <div class="u-active u-align-center u-carousel-item u-clearfix u-grey-75 u-section-3-1" src="">
+        <div class="u-active u-align-center u-carousel-item u-clearfix u-grey-75 u-section-4-1" src="">
           <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
             <h1 class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-title u-text-1">инж.Димитрина Цветкова</h1>
           </div>
         </div>
-        <div class="u-align-center u-carousel-item u-clearfix u-grey-75 u-section-3-2" src="">
+        <div class="u-align-center u-carousel-item u-clearfix u-grey-75 u-section-4-2" src="">
           <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
             <h1 class="u-text u-text-default u-title u-text-1">инж.Пенка Янева</h1>
           </div>
         </div>
-        <div class="u-align-center u-carousel-item u-clearfix u-grey-75 u-section-3-3" src="">
+        <div class="u-align-center u-carousel-item u-clearfix u-grey-75 u-section-4-3" src="">
           <div class="u-clearfix u-sheet u-sheet-1">
             <h1 class="u-text u-text-default u-title u-text-1">инж.Ивайло Иванов</h1>
           </div>
         </div>
-        <div class="u-align-center u-carousel-item u-clearfix u-grey-75 u-section-3-4" src="">
+        <div class="u-align-center u-carousel-item u-clearfix u-grey-75 u-section-4-4" src="">
           <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
             <h1 class="u-text u-text-default u-title u-text-1">инж.Елена Кацарска</h1>
           </div>
         </div>
-        <div class="u-align-center u-carousel-item u-clearfix u-grey-75 u-section-3-5" src="">
+        <div class="u-align-center u-carousel-item u-clearfix u-grey-75 u-section-4-5" src="">
           <div class="u-clearfix u-sheet u-sheet-1">
             <h1 class="u-align-center-sm u-align-center-xs u-text u-text-default u-title u-text-1">инж.Петър Петров</h1>
           </div>
@@ -145,7 +202,7 @@
         <span class="sr-only">Next</span>
       </a>
     </section>
-    <section class="u-clearfix u-video u-section-4" id="sec-f082">
+    <section class="u-clearfix u-video u-section-5" id="sec-f082">
       <div class="u-background-video u-expanded" style="">
         <div class="embed-responsive embed-responsive-1">
           <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="https://www.youtube.com/embed/m1YUmZRfgqU?playlist=m1YUmZRfgqU&amp;loop=1&amp;mute=1&amp;showinfo=0&amp;controls=0&amp;start=0&amp;autoplay=1" data-autoplay="1" frameborder="0" allowfullscreen=""></iframe>
@@ -177,7 +234,7 @@
         </div>
       </div>
     </section>
-    <section class="skrollable u-align-center u-border-6 u-border-palette-3-base u-clearfix u-image u-section-5" id="sec-47be" data-image-width="3840" data-image-height="2160">
+    <section class="skrollable u-align-center u-border-6 u-border-palette-3-base u-clearfix u-image u-section-6" id="sec-47be" data-image-width="3840" data-image-height="2160">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-default u-text-1">Абитюриенски Бал</h2>
         <h3 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-2"><span class="u-icon"></span>&nbsp;25.05.2022
@@ -231,6 +288,6 @@
         <p class="u-small-text u-text u-text-variant u-text-1">Правено от&nbsp;<a href="https://emojipedia.org/red-heart/" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">❤️</a>
         </p>
       </div></footer>
-    
+
   
 </body></html>

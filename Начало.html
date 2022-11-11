@@ -125,25 +125,26 @@
     </section>
 	
 <script>
-	
-	var countDownDate = new Date("Dec 11, 2022 00:00:00").getTimer();
-	var x = setInterval(function(){
-		var now = new Date().getTime();
-		var distance = countDownDate - now;
-	},1000);
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
 
-	document.getElementById("days").innerHTML = days;
-	document.getElementById("hours").innerHTML = hours;
-	document.getElementById("minutes").innerHTML = minutes;
-	document.getElementById("secs").innerHTML = seconds;
-	
-	
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = days;
+  document.getElementById("secs").innerHTML = seconds;
+
+}, 1000);
 </script>
 	
     <section class="u-align-center u-clearfix u-grey-75 u-section-3" src="" id="sec-aac5">

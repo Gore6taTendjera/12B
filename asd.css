@@ -38740,10 +38740,6 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 @media (max-width: 575px) {
-  .u-header .u-menu-1 {
-    margin-top: 31px;
-  }
-
   .u-header .u-nav-2 {
     letter-spacing: 2px;
   }

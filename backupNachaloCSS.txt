@@ -177,7 +177,7 @@
 .u-section-3-1 .u-text-1 {
   font-weight: 700;
   font-size: 6rem;
-  margin: 340px -50px 60px;
+  margin: 317px -50px 60px;
 }
 
 @media (max-width: 1199px) {
@@ -234,7 +234,7 @@
 .u-section-3-2 .u-text-1 {
   font-size: 6rem;
   font-weight: 700;
-  margin: 340px auto 60px;
+  margin: 317px auto 60px;
 }
 
 @media (max-width: 1199px) {
@@ -288,7 +288,7 @@
 .u-section-3-3 .u-text-1 {
   font-size: 6rem;
   font-weight: 700;
-  margin: 340px auto 60px;
+  margin: 317px auto 60px;
 }
 
 @media (max-width: 1199px) {
@@ -346,7 +346,7 @@
 .u-section-3-4 .u-text-1 {
   font-size: 6rem;
   font-weight: 700;
-  margin: 340px auto 60px;
+  margin: 317px auto 60px;
 }
 
 @media (max-width: 1199px) {
@@ -403,7 +403,7 @@
 .u-section-3-5 .u-text-1 {
   font-size: 6rem;
   font-weight: 700;
-  margin: 340px auto 60px;
+  margin: 317px auto 60px;
 }
 
 @media (max-width: 1199px) {
@@ -423,7 +423,7 @@
 
   .u-section-3-5 .u-text-1 {
     width: auto;
-    margin-top: 170px;
+    margin-top: 180px;
     margin-left: 38px;
     margin-right: 38px;
     font-size: 4.5rem;

@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<meta name = "viewport" content = "width = 320,
-       initial-scale = 2.3, user-scalable = no">
+<html style="font-size: 16px;" lang="en"><head>
+
+
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#000000">
-<html style="font-size: 16px;" lang="en"><head>
+<style>
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+}
+
+/* The ::before element is used to cover the left side of the notch */
+header::before {
+    top: 0;
+    left: 0;
+    width: env(safe-area-inset-left);
+    height: 100%;
+}
+
+/* The ::after element is used to cover the right side of the notch */
+header::after {
+    top: 0;
+    right: 0;
+    width: env(safe-area-inset-right);
+    height: 100%;
+}
+</style>
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="keywords" content="12В КЛАС, Абитюриенски Бал">

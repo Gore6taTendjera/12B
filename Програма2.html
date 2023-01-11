@@ -219,14 +219,11 @@
           break;
         case 6:
           day = "Saturday";
-
       }
       //document.getElementById("chasNext").innerHTML = day;
-
     }
     setInterval(checkTime, 100);
   </script>
-
   <script src="luxon.js"></script>
   <script>
     let DateTime = luxon.DateTime;
@@ -245,7 +242,6 @@
       { start: '17:55', end: '18:00', state: '6 mejduchasie' },
       { start: '18:00', end: '18:35', state: '7 chas' },
     ];
-
     function checkTime() {
       let currentTime = DateTime.local();
       for (let i = 0; i < schedule.length; i++) {

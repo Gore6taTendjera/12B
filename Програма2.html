@@ -228,6 +228,7 @@
   <script>
     let DateTime = luxon.DateTime;
     const schedule = [
+	  { start: '00:00', end: '13:30', state: 'Трябва да ходиш на даскало' },
       { start: '13:30', end: '14:05', state: '1vi chas' },
       { start: '14:05', end: '14:15', state: '1vo mejduchasie' },
       { start: '14:15', end: '14:50', state: '2ri chas' },
@@ -241,6 +242,7 @@
       { start: '17:20', end: '17:55', state: '6 chas' },
       { start: '17:55', end: '18:00', state: '6 mejduchasie' },
       { start: '18:00', end: '18:35', state: '7 chas' },
+	  { start: '18:35', end: '23:59', state: 'Даскалото свърши' },
     ];
     function checkTime() {
       let currentTime = DateTime.local();

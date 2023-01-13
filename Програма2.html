@@ -7,10 +7,10 @@
   <meta name="keywords" content="Снимки на класа2018-2023">
   <meta name="description" content="">
   <title>12В Ученици</title>
-  <link rel="stylesheet" href="asd.css" media="screen">
+  <link rel="stylesheet" href="nicepage.css" media="screen">
   <link rel="stylesheet" href="Програма2.css" media="screen">
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-  <script class="u-script" type="text/javascript" src="asdf.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
   <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -25,7 +25,7 @@
 		"name": ""
 }</script>
   <meta name="theme-color" content="#478ac9">
-  <meta property="og:title" content="Програма">
+  <meta property="og:title" content="12В Ученици">
   <meta property="og:type" content="website">
 </head>
 
@@ -149,6 +149,10 @@
     <div id="remaining-hours"></div>
     <div id="remaining-minutes"></div>
     <div id="remaining-seconds"></div>
+    <div id="timenow"></div>
+    <div id="start"></div>
+    <div id="end"></div>
+    <div id="interval"></div>
 
   </section>
 
@@ -165,10 +169,10 @@
       const date = new Date();
       let hour = date.getHours();
       let minute = date.getMinutes();
-      let endTime = new Date();
+      //let endTime = new Date();
 
       var currentTime = new Date(); // current time
-      var endTime = new Date();
+      //var endTime = new Date();
 
 
       switch (date.getDay()) {
@@ -182,13 +186,13 @@
           day = "Monday";
           break;
         case 2:
-          endTime.setHours(18);
-          endTime.setMinutes(35);
+          //endTime.setHours(18);
+          //endTime.setMinutes(35);
           document.getElementById("chasNextmin").innerHTML = "The time is 15:50!";
           if (hour <= 13 && minute <= 30) {
             document.getElementById("chasNextmin").innerHTML = "The time is 15:50!";
-            endTime.setHours(13);
-            endTime.setMinutes(30);
+            //endTime.setHours(13);
+            //endTime.setMinutes(30);
             let remainingTime = endTime.getTime() - date.getTime();
             let remainingMinutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
             let remainingHours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -219,16 +223,20 @@
           break;
         case 6:
           day = "Saturday";
+
       }
       //document.getElementById("chasNext").innerHTML = day;
+
     }
     setInterval(checkTime, 1000);
   </script>
+
   <script src="luxon.js"></script>
   <script>
     let DateTime = luxon.DateTime;
+    let Interval = luxon.Interval;
     const schedule = [
-	  { start: '00:00', end: '13:30', state: 'Трябва да ходиш на даскало' },
+      { start: '00:00', end: '13:30', state: 'Часа започва след: ' },
       { start: '13:30', end: '14:05', state: '1vi chas' },
       { start: '14:05', end: '14:15', state: '1vo mejduchasie' },
       { start: '14:15', end: '14:50', state: '2ri chas' },
@@ -242,33 +250,39 @@
       { start: '17:20', end: '17:55', state: '6 chas' },
       { start: '17:55', end: '18:00', state: '6 mejduchasie' },
       { start: '18:00', end: '18:35', state: '7 chas' },
-	  { start: '18:35', end: '23:59', state: 'Даскалото свърши' },
+      { start: '18:35', end: '23:59', state: 'Даскалото свърши' },
     ];
+
     function checkTime() {
       let currentTime = DateTime.local();
       for (let i = 0; i < schedule.length; i++) {
         let start = DateTime.local().set({ hour: schedule[i].start.split(':')[0], minute: schedule[i].start.split(':')[1] });
         let end = DateTime.local().set({ hour: schedule[i].end.split(':')[0], minute: schedule[i].end.split(':')[1] });
         if (currentTime >= start && currentTime <= end) {
-          console.log(schedule[i].state);
-          document.getElementById("chasNow").innerHTML = schedule[i].state;
+          //document.getElementById("chasNow").innerHTML = schedule[i].state;
+
+          const diffTime = end.diff(currentTime, ["hours", "minutes", "seconds"]);
+          document.getElementById("chasRemain").innerHTML = diffTime.values.hours + ' часа и ' + diffTime.values.minutes + ' минути';
+
+          if (state = 'Часа започва след: ') {
+            const diffTime2 = end.diff(currentTime, ["hours", "minutes", "seconds"]);
+            document.getElementById("chasNow").innerHTML = "Часа започва след: " + diffTime2.values.hours + ' часа и ' + diffTime2.values.minutes + ' минути';
+          }
 		  
-          let remainingDuration = end.diff(currentTime);
-          let remainingHours = Math.floor(remainingDuration.as('hours'));
-          let remainingMinutes = remainingDuration.minutes;
-          let remainingSeconds = remainingDuration.seconds;
-          document.getElementById("remaining-hours").innerHTML = remainingHours;
-          document.getElementById("remaining-minutes").innerHTML = remainingMinutes;
-          document.getElementById("remaining-seconds").innerHTML = remainingSeconds;
-          //i = Interval.fromDateTimes(start, end);
-          //i.length('minutes')  
-          //document.getElementById("remaining-minutes").innerHTML = i.length('minutes');
-		  const date = new Date();
-		  let minute = date.getMinutes();
-		  let final = (currentTime - end);
-		  //console.log(DateTime.now() - end);
-		  document.getElementById("remaining-seconds").innerHTML = Math.floor(remainingDuration);
+		  
+         //let remainTimeHr = end.hour - currentTime.hour;
+         //let remainTimeMin = end.minute - currentTime.minute;
+          //console.log(schedule[i].state);
+          //console.log(remainTimeHr + ':' + remainTimeMin);
+          //console.log("sega min: " + currentTime.minute);
+          //intervalstr = Interval.fromDateTimes(start, end);
+          //var intyears = intervalstr.length('minutes')
+          //document.getElementById("timenow").innerHTML =currentTime;
+          //document.getElementById("start").innerHTML =start;
+          //document.getElementById("end").innerHTML = "chasa svurshva sled: " + end.minute;
+          //document.getElementById("chasRemain").innerHTML = "chasa sapochva sled: " + currentTime.hour;
           return;
+
         }
       }
       console.log('Time not found')

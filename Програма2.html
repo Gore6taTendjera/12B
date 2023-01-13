@@ -236,8 +236,7 @@
     let DateTime = luxon.DateTime;
     let Interval = luxon.Interval;
     const schedule = [
-      { start: '00:00', end: '13:30', state: 'Часа започва след: ' },
-      { start: '13:30', end: '14:05', state: '1vi chas' },
+      { start: '13:30', end: '14:05', state: 'Математика' },
       { start: '14:05', end: '14:15', state: '1vo mejduchasie' },
       { start: '14:15', end: '14:50', state: '2ri chas' },
       { start: '14:50', end: '15:10', state: 'GOLQMO' },
@@ -250,7 +249,7 @@
       { start: '17:20', end: '17:55', state: '6 chas' },
       { start: '17:55', end: '18:00', state: '6 mejduchasie' },
       { start: '18:00', end: '18:35', state: '7 chas' },
-      { start: '18:35', end: '23:59', state: 'Даскалото свърши' },
+
     ];
 
     function checkTime() {
@@ -259,20 +258,15 @@
         let start = DateTime.local().set({ hour: schedule[i].start.split(':')[0], minute: schedule[i].start.split(':')[1] });
         let end = DateTime.local().set({ hour: schedule[i].end.split(':')[0], minute: schedule[i].end.split(':')[1] });
         if (currentTime >= start && currentTime <= end) {
-          //document.getElementById("chasNow").innerHTML = schedule[i].state;
-
-          const diffTime = end.diff(currentTime, ["hours", "minutes", "seconds"]);
+		const diffTime = end.diff(currentTime, ["hours", "minutes", "seconds"]);
+          document.getElementById("chasNow").innerHTML = schedule[i].state + diffTime.values.hours + ' часа и ' + diffTime.values.minutes + ' минути';
           document.getElementById("chasRemain").innerHTML = diffTime.values.hours + ' часа и ' + diffTime.values.minutes + ' минути';
 
-          if (state = 'Часа започва след: ') {
-            const diffTime2 = end.diff(currentTime, ["hours", "minutes", "seconds"]);
-            document.getElementById("chasNow").innerHTML = "Часа започва след: " + diffTime2.values.hours + ' часа и ' + diffTime2.values.minutes + ' минути';
-          }
-		  
+      
 		  
          //let remainTimeHr = end.hour - currentTime.hour;
          //let remainTimeMin = end.minute - currentTime.minute;
-          //console.log(schedule[i].state);
+          console.log(schedule[i].state);
           //console.log(remainTimeHr + ':' + remainTimeMin);
           //console.log("sega min: " + currentTime.minute);
           //intervalstr = Interval.fromDateTimes(start, end);
@@ -284,6 +278,19 @@
           return;
 
         }
+		else if (currentTime.hour > 21){
+		    const diffTime2 = end.diff(currentTime, ["hours", "minutes", "seconds"]);
+            document.getElementById("chasNow").innerHTML = "Даскалото свърши брато";
+			return;
+		}
+		else{
+			const diffTime3 = start.diff(currentTime, ["hours", "minutes", "seconds"]);
+			document.getElementById("chasNow").innerHTML = schedule[i].state + " след " + diffTime3.values.hours + " часа и " + diffTime3.values.minutes + " минути";
+			
+			
+		}
+		
+		
       }
       console.log('Time not found')
     }

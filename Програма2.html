@@ -196,15 +196,15 @@
             let remainingTime = endTime.getTime() - date.getTime();
             let remainingMinutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
             let remainingHours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("chasNow").innerHTML = "не си на даскало  бе брат";
+            //document.getElementById("chasNow").innerHTML = "не си на даскало  бе брат";
             document.getElementById("chasNextmin").innerHTML = remainingMinutes;
             document.getElementById("chasNexthour").innerHTML = remainingHours + ":" + remainingMinutes;
           }
           else if (hour == 18 && minute >= 35) {
-            document.getElementById("chasNow").innerHTML = "не си на даскало бе брат";
+            //document.getElementById("chasNow").innerHTML = "не си на даскало бе брат";
           }
           else if (hour > 19 && minute >= 0) {
-            document.getElementById("chasNow").innerHTML = "не си на даскало бе брат";
+            //document.getElementById("chasNow").innerHTML = "не си на даскало бе брат";
           }
           day = "Tuesday";
 
@@ -233,70 +233,136 @@
 
   <script src="luxon.js"></script>
   <script>
+	let nextState = '';
     let DateTime = luxon.DateTime;
     let Interval = luxon.Interval;
-    const schedule = [
-      { start: '13:30', end: '14:05', state: 'Математика' },
-      { start: '14:05', end: '14:15', state: '1vo mejduchasie' },
-      { start: '14:15', end: '14:50', state: '2ri chas' },
-      { start: '14:50', end: '15:10', state: 'GOLQMO' },
-      { start: '15:10', end: '15:45', state: '3ti chas' },
-      { start: '15:45', end: '15:55', state: '3to mejduchasie' },
-      { start: '15:55', end: '16:30', state: '4ti chas' },
-      { start: '16:30', end: '16:40', state: '4to mejduchasie' },
-      { start: '16:40', end: '17:15', state: '5 chas' },
-      { start: '17:15', end: '17:20', state: '5 mejduchasie' },
-      { start: '17:20', end: '17:55', state: '6 chas' },
-      { start: '17:55', end: '18:00', state: '6 mejduchasie' },
-      { start: '18:00', end: '18:35', state: '7 chas' },
-
-    ];
-
-    function checkTime() {
-      let currentTime = DateTime.local();
-      for (let i = 0; i < schedule.length; i++) {
+	const date = new Date();
+	switch (date.getDay()) {
+        case 0:
+			day = "Sunday";
+			var schedule = [
+				{ start: '00:00', end: '23:59', state: 'Няма даскало в неделя!' },
+			];			
+			break;
+        case 1:
+			day = "Monday"
+			var schedule = [
+			  { start: '13:30', end: '14:05', state: 'БЕЛ' },
+			  { start: '14:05', end: '14:15', state: 'Междучасие 1' },
+			  { start: '14:15', end: '14:50', state: 'БЕЛ РП' },
+			  { start: '14:50', end: '15:10', state: 'ГОЛЯМО МЕЖДУЧАСИЕ' },
+			  { start: '15:10', end: '15:45', state: 'Физическо' },
+			  { start: '15:45', end: '15:55', state: 'Междучасие 3' },
+			  { start: '15:55', end: '16:30', state: 'Компютърни мрежи' },
+			  { start: '16:30', end: '16:40', state: 'Междучасие 4' },
+			  { start: '16:40', end: '17:15', state: 'Компютърни мрежи' },
+			  { start: '17:15', end: '17:20', state: 'Междучасие 5' },
+			  { start: '17:20', end: '17:55', state: 'Руски' },
+			  { start: '17:55', end: '18:00', state: 'Междучасие 6' },
+			  { start: '18:00', end: '18:35', state: 'Руски' },
+			];
+			break;
+		case 2:
+			day = "Tuesday";
+			var schedule = [
+			  { start: '13:30', end: '14:05', state: 'Математика' },
+			  { start: '14:05', end: '14:15', state: 'Междучасие 1' },
+			  { start: '14:15', end: '14:50', state: 'Физическо' },
+			  { start: '14:50', end: '15:10', state: 'ГОЛЯМО МЕЖДУЧАСИЕ' },
+			  { start: '15:10', end: '15:45', state: 'Приложен софтуер' },
+			  { start: '15:45', end: '15:55', state: 'Междучасие 3' },
+			  { start: '15:55', end: '16:30', state: 'Приложен софтуер' },
+			  { start: '16:30', end: '16:40', state: 'Междучасие 4' },
+			  { start: '16:40', end: '17:15', state: 'Програмиране' },
+			  { start: '17:15', end: '17:20', state: 'Междучасие 5' },
+			  { start: '17:20', end: '17:55', state: 'Програмиране' },
+			];
+			break;
+        case 3:
+			day = "Wednesday";
+			var schedule = [
+			{ start: '09:00', end: '18:35', state: 'Практика' },
+			];
+			break;
+        case 4:
+			day = "Thursday";
+			var schedule = [
+			  { start: '13:30', end: '14:05', state: 'Час на класа' },
+			  { start: '14:05', end: '14:15', state: 'Междучасие 1' },
+			  { start: '14:15', end: '14:50', state: 'БЕЛ' },
+			  { start: '14:50', end: '15:10', state: 'ГОЛЯМО МЕЖДУЧАСИЕ' },
+			  { start: '15:10', end: '15:45', state: 'БЕЛ' },
+			  { start: '15:45', end: '15:55', state: 'Междучасие 3' },
+			  { start: '15:55', end: '16:30', state: 'Програмиране за микроконтролери' },
+			  { start: '16:30', end: '16:40', state: 'Междучасие 4' },
+			  { start: '16:40', end: '17:15', state: 'Математика' },
+			  { start: '17:15', end: '17:20', state: 'Междучасие 5' },
+			  { start: '17:20', end: '17:55', state: 'Физическо' },
+			  { start: '17:55', end: '18:00', state: 'Междучасие 6' },
+			  { start: '18:00', end: '18:35', state: 'Гражданско образование' },
+			];
+			break;
+        case 5:
+			day = "Friday";
+			var schedule = [
+			  { start: '13:30', end: '14:05', state: 'Чужд език по професия' },
+			  { start: '14:05', end: '14:15', state: 'Междучасие 1' },
+			  { start: '14:15', end: '14:50', state: 'Чужд език по професия 2' },
+			  { start: '14:50', end: '15:10', state: 'ГОЛЯМО МЕЖДУЧАСИЕ' },
+			  { start: '15:10', end: '15:45', state: 'УП Контрол и диагностика 1' },
+			  { start: '15:45', end: '15:55', state: 'Междучасие 3' },
+			  { start: '15:55', end: '16:30', state: 'УП Контрол и диагностика 2' },
+			  { start: '16:30', end: '16:40', state: 'Междучасие 4' },
+			  { start: '16:40', end: '17:15', state: 'УП Контрол и диагностика 3' },
+			  { start: '17:15', end: '17:20', state: 'Междучасие 5' },
+			  { start: '17:20', end: '17:55', state: 'УП Контрол и диагностика 4' },
+			  { start: '17:55', end: '18:00', state: 'Междучасие 6' },
+			  { start: '18:00', end: '18:35', state: 'УП Контрол и диагностика 5' },
+			];
+			break;
+        case 6:
+			day = "Saturday";
+			var schedule = [
+			  { start: '09:00', end: '18:35', state: 'Практика' },
+			];
+			break;
+	}
+	
+function checkTime() {
+	let nextState = '';
+    let currentTime = DateTime.local();
+	console.log(currentTime.hour);
+    for (let i = 0; i < schedule.length; i++) {
         let start = DateTime.local().set({ hour: schedule[i].start.split(':')[0], minute: schedule[i].start.split(':')[1] });
         let end = DateTime.local().set({ hour: schedule[i].end.split(':')[0], minute: schedule[i].end.split(':')[1] });
         if (currentTime >= start && currentTime <= end) {
-		const diffTime = end.diff(currentTime, ["hours", "minutes", "seconds"]);
-          document.getElementById("chasNow").innerHTML = schedule[i].state + diffTime.values.hours + ' часа и ' + diffTime.values.minutes + ' минути';
-          document.getElementById("chasRemain").innerHTML = diffTime.values.hours + ' часа и ' + diffTime.values.minutes + ' минути';
-
-      
-		  
-         //let remainTimeHr = end.hour - currentTime.hour;
-         //let remainTimeMin = end.minute - currentTime.minute;
-          console.log(schedule[i].state);
-          //console.log(remainTimeHr + ':' + remainTimeMin);
-          //console.log("sega min: " + currentTime.minute);
-          //intervalstr = Interval.fromDateTimes(start, end);
-          //var intyears = intervalstr.length('minutes')
-          //document.getElementById("timenow").innerHTML =currentTime;
-          //document.getElementById("start").innerHTML =start;
-          //document.getElementById("end").innerHTML = "chasa svurshva sled: " + end.minute;
-          //document.getElementById("chasRemain").innerHTML = "chasa sapochva sled: " + currentTime.hour;
-          return;
-
-        }
-		else if (currentTime.hour > 21){
-		    const diffTime2 = end.diff(currentTime, ["hours", "minutes", "seconds"]);
-            document.getElementById("chasNow").innerHTML = "Даскалото свърши брато";
-			return;
+            //console.log(schedule[i].state);
+			const diffTime = end.diff(currentTime, ["hours", "minutes", "seconds"]);
+			document.getElementById("chasNow").innerHTML = schedule[i].state;
+				if(diffTime.values.hours == 0){
+					document.getElementById("chasRemain").innerHTML = diffTime.values.minutes + ' минути';}
+				else{
+					document.getElementById("chasRemain").innerHTML = diffTime.values.hours + ' часа и ' + diffTime.values.minutes + ' минути';}
+		nextState = i < schedule.length - 1 ? schedule[i + 1].state : '';
+		document.getElementById("chasNext").innerHTML = nextState;	
+        return;
 		}
 		else{
-			const diffTime3 = start.diff(currentTime, ["hours", "minutes", "seconds"]);
-			document.getElementById("chasNow").innerHTML = schedule[i].state + " след " + diffTime3.values.hours + " часа и " + diffTime3.values.minutes + " минути";
+			document.getElementById("chasNow").innerHTML = "Даскалото свърши!";
+			if(currentTime.hour <= start){
+				let nextState = schedule[2].state;
+				const diffTime = start.diff(currentTime, ["hours", "minutes", "seconds"]);
+				document.getElementById("chasNow").innerHTML = schedule[0].state + ' след ' + diffTime.values.hours + ' часа и ' + diffTime.values.minutes + ' минути';
+				document.getElementById("chasNext").innerHTML = nextState;
+				console.log(nextState);
 			
-			
+			}
 		}
-		
-		
-      }
-      console.log('Time not found')
     }
-    setInterval(checkTime, 1000);
+    console.log('Time not found')
+}
+setInterval(checkTime, 1000);
 
   </script>
 </body>
-
 </html>

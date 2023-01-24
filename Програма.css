@@ -82,54 +82,53 @@
 
 .u-section-2 .u-text-1 {
   font-size: 6rem;
-  margin: 185px auto 0 60px;
+  font-weight: 700;
+  margin: 67px 0 0;
 }
 
 .u-section-2 .u-text-2 {
-  font-size: 6rem;
-  margin: -105px 60px 0 auto;
+  margin: 60px 0 0;
 }
 
 .u-section-2 .u-text-3 {
-  margin: 60px auto 0 178px;
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 74px 0 0;
 }
 
 .u-section-2 .u-text-4 {
-  margin: -52px 95px 0 auto;
+  margin: 53px 0 0;
 }
 
 .u-section-2 .u-text-5 {
   font-size: 6rem;
-  margin: 40px auto 0;
+  font-weight: 700;
+  margin: 93px 0 0;
 }
 
 .u-section-2 .u-text-6 {
-  margin: 60px auto;
+  margin: 60px 0;
 }
 
 @media (max-width: 991px) {
   .u-section-2 .u-text-1 {
     width: auto;
     margin-top: 115px;
-    margin-left: auto;
   }
 
   .u-section-2 .u-text-2 {
-    width: 327px;
-    margin-top: 136px;
-    margin-right: auto;
+    width: auto;
+    margin-top: 33px;
   }
 
   .u-section-2 .u-text-3 {
     width: auto;
-    margin-top: -208px;
-    margin-left: auto;
+    margin-top: 51px;
   }
 
   .u-section-2 .u-text-4 {
     width: auto;
-    margin-top: 207px;
-    margin-right: auto;
+    margin-top: 51px;
   }
 
   .u-section-2 .u-text-5 {
@@ -150,29 +149,14 @@
 
   .u-section-2 .u-text-1 {
     font-size: 3.75rem;
-    margin-top: 103px;
-  }
-
-  .u-section-2 .u-text-2 {
-    font-size: 3.75rem;
-    margin-top: 236px;
   }
 
   .u-section-2 .u-text-3 {
-    margin-top: -233px;
-  }
-
-  .u-section-2 .u-text-4 {
-    margin-top: 234px;
+    font-size: 3.75rem;
   }
 
   .u-section-2 .u-text-5 {
     font-size: 3.75rem;
-    margin-top: 128px;
-  }
-
-  .u-section-2 .u-text-6 {
-    margin-top: 69px;
   }
 }
 
@@ -185,29 +169,12 @@
     font-size: 3rem;
   }
 
-  .u-section-2 .u-text-2 {
-    font-size: 3rem;
-    width: auto;
-    margin-top: 117px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
   .u-section-2 .u-text-3 {
-    margin-top: -135px;
-  }
-
-  .u-section-2 .u-text-4 {
-    margin-top: 138px;
+    font-size: 3rem;
   }
 
   .u-section-2 .u-text-5 {
     font-size: 3rem;
-    margin-top: 66px;
-  }
-
-  .u-section-2 .u-text-6 {
-    margin-top: 36px;
   }
 } .u-section-3 {
   background-image: none;

@@ -38,8 +38,6 @@
 
 
 
-
-
  .u-section-1 {
   background-image: none;
 }
@@ -750,37 +748,5 @@
   .u-section-4 .u-text-26 {
     width: auto;
     margin-top: 7px;
-  }
-} .u-section-5 {
-  background-image: none;
-}
-
-.u-section-5 .u-sheet-1 {
-  min-height: 528px;
-}
-
-.u-section-5 .u-text-1 {
-  margin: 93px auto 0;
-}
-
-.u-section-5 .u-form-1 {
-  height: 241px;
-  width: 570px;
-  margin: 16px auto 60px;
-}
-
-.u-section-5 .u-btn-1 {
-  background-image: none;
-}
-
-@media (max-width: 767px) {
-  .u-section-5 .u-form-1 {
-    width: 540px;
-  }
-}
-
-@media (max-width: 575px) {
-  .u-section-5 .u-form-1 {
-    width: 340px;
   }
 }

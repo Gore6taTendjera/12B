@@ -1,0 +1,66 @@
+::-webkit-scrollbar {
+	display: none;
+}
+
+.container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+
+
+.hide-scrollbar
+{
+    overflow: auto;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
+}
+
+
+          @-moz-document url-prefix() { /* Disable scrollbar Firefox */
+            html{
+              scrollbar-width: none;
+            }
+          }
+          body {
+            margin: 0; /* remove default margin */
+            scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+            -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+            overflow-y: scroll;
+          }
+          body::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+          }
+
+
+
+
+
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 540px;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 6rem;
+  margin: 60px auto;
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-text-1 {
+    font-size: 3.75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    font-size: 3rem;
+  }
+}

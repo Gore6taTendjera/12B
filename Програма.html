@@ -259,6 +259,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 			day = "Wednesday";
 			var schedule = [
 			{ start: '09:00', end: '18:35', state: 'Практика' },
+			{ start: '09:00', end: '18:35', state: 'Практика' },
+			{ start: '09:00', end: '18:35', state: 'Практика' },
 			];
 			break;
         case 4:
@@ -331,10 +333,13 @@ function checkTime() {
 				var razlika = startTime.diff(currentTime, ["hours", "minutes", "seconds"]);
 				document.getElementById("chasNow").innerHTML = schedule[0].state + ' след ' + razlika.values.hours + ' часа и ' + razlika.values.minutes + ' минути';
 				document.getElementById("chasNext").innerHTML = nextState;
+				document.getElementById("chasRemain").innerHTML = + razlika.values.hours + ' часа и ' + razlika.values.minutes + ' минути';
+				return;
 			}
 			document.getElementById("chasNext").innerHTML = "Сладки сънища";
 			document.getElementById("chasNow").innerHTML = "Училището свърши";
 			document.getElementById("chasRemain").innerHTML = "Остана да се наспиш";
+			
 		}
     }
     console.log('Time not found')

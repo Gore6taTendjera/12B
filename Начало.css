@@ -6,7 +6,7 @@
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
-.container::-webkit-scrollbar { 
+.container::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
 
@@ -999,8 +999,8 @@
 
   .u-section-5 .u-text-1 {
     font-size: 2.614rem;
-  } 
-  
+  }
+
   .u-section-5 .u-text-2 {
     font-size: 2.7rem;
 	margin: 10px auto 0;
@@ -1105,12 +1105,12 @@ display:block;
 
 
 .stars {
-background:#000 url(stars.png) repeat top center;
+background:#000 url(images/stars.png) repeat top center;
 z-index:0;
 }
 
 .twinkling{
-background:transparent url(twinkling.png) repeat top center;
+background:transparent url(images/twinkling.png) repeat top center;
 z-index:1;
 animation:move-twink-back 200s linear infinite;
 }
@@ -1118,23 +1118,42 @@ animation:move-twink-back 200s linear infinite;
 
 
 #myBtn {
-  display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
-  z-index: 99;
+  right: 20px;
+  z-index: 20;
   font-size: 5px;
-  height: 70px;
-  width: 70px;
-  border: none;
-  outline: none;
+  height: 60px;
+  width: 60px;
   background-color: grey;
-  color: white;
-  cursor: pointer;
   padding: 10px;
-  border-radius: 90px;
+  border-color: #dcdcdc;
+  border-radius: 20px;
+  border-width:5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 10px #ff00bf, 0 0 10px #ff00bf, 0 0 10px #ff00bf,
+    0 0 50px #ff00bf;
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: #bababa;
+    transition: all 0.3s ease-in-out;
+    animation: animate 3s linear infinite;
+    backdrop-filter: blur(15px) saturate(3);
+    filter: drop-shadow(0 0 0.75rem rgb(255, 214, 0));
+    box-shadow: 0 0 15px 4px gold ;
 }
+
+.btnTop{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

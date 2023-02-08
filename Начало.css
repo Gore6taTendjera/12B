@@ -1103,6 +1103,7 @@ height:100%;
 display:block;
 }
 
+
 .stars {
 background:#000 url(stars.png) repeat top center;
 z-index:0;
@@ -1112,4 +1113,28 @@ z-index:0;
 background:transparent url(twinkling.png) repeat top center;
 z-index:1;
 animation:move-twink-back 200s linear infinite;
+}
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 5px;
+  height: 70px;
+  width: 70px;
+  border: none;
+  outline: none;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 90px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }

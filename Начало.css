@@ -1117,43 +1117,13 @@ animation:move-twink-back 200s linear infinite;
 
 
 
-#myBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 20;
-  font-size: 5px;
-  height: 60px;
-  width: 60px;
-  background-color: grey;
-  padding: 10px;
-  border-color: #eeeeee;
-  border-radius: 20px;
-  border-width:5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease-in-out;
-  text-shadow: 0 0 10px #ff00bf, 0 0 10px #ff00bf, 0 0 10px #ff00bf,
-    0 0 50px #ff00bf;
-}
-
-#myBtn:hover {
-  background-color: #bababa;
-    transition: all 0.3s ease-in-out;
-    animation: animate 3s linear infinite;
-    backdrop-filter: blur(15px) saturate(3);
-    filter: drop-shadow(0 0 0.75rem rgb(255, 214, 0));
-    box-shadow: 0 0 15px 4px gold ;
-}
-
-.btnTop{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
+/* 
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+} */
 

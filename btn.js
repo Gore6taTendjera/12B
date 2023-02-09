@@ -16,3 +16,4 @@ goTopBtn.addEventListener('click', () => {
     behavior: "smooth"
   })
 })
+goTopBtn.style.display = "none";

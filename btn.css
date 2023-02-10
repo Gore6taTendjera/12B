@@ -35,20 +35,6 @@
     align-items: center;
     justify-content: center;
   }
-  
-
-  /* @keyframes animate {
-    from {
-      box-shadow: transperent;
-      
-    }
-    to {
-      box-shadow: 0 0 15px 4px rgb(211, 211, 211) ;
-    }
-  } */
-
-
-
 
   @keyframes animate {
     0% {

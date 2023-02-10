@@ -1,0 +1,3 @@
+AddType application/octet-stream .pdf
+AddType application/octet-stream .pptx
+AddType application/octet-stream .docx

@@ -91,95 +91,6 @@
 .u-section-2 .u-text-1 {
   margin: 375px 2px 0 28px;
 }
-.u-text-back{
-  padding-top: 0.8em;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-  /* margin-top: 1.5em; */
-  color: white; 
-  font-family: Caveat; 
-  font-size: 35px; 
-  font-weight: bold;
-  /* word-wrap: break-word; */
-  /*width: 0.1em; */
-  line-height: 1;
-}
-
-.facebook-icon {
-  position: absolute; 
-  right: 18px; 
-  bottom: -1px; 
-  font-size: 60px;
-  display: inline-block;
-  padding: 1px 1  9px;
-  transition: all 0.3s ease-in-out;
-  text-shadow: 0 0 10px #0072ff, 0 0 10px #0072ff, 0 0 10px #0072ff,
-    0 0 50px #0072ff;
-}
-.facebook-icon:hover {
-  animation: animate 3s linear infinite;
-}
-
-
-.instagram-icon {
-  position: absolute;
-  right: 45px;
-  bottom: 7.6px;
-  font-size: 60px;
-  display: inline-block;
-  padding: 1px 1 9px;
-  transition: all 0.3s ease-in-out;
-  text-shadow: 0 0 10px #ff00bf, 0 0 10px #ff00bf, 0 0 10px #ff00bf,
-    0 0 50px #ff00bf;
-}
-.instagram-icon:hover {
-  animation: animate 3s linear infinite;
-}
-
-.github-icon{
-  position: absolute;
-  right: 160px;
-  bottom: -2px;
-  font-size: 60px;
-  display: inline-block;
-  padding: 1px 1 9px;
-  transition: all 0.3s ease-in-out;
-  text-shadow: 0 0 10px #111111, 0 0 10px #111111, 0 0 10px #111111,
-    0 0 50px #111111;
-}
-.github-icon:hover {
-  animation: animate 3s linear infinite;
-  text-shadow: 0 0 10px #929292, 0 0 10px #929292, 0 0 10px #929292,
-    0 0 50px #929292;
-  color: black;
-}
-
-
-#twitter {
-  animation-delay: 0.3s;
-}
-#facebook {
-  animation-delay: 0.7s;
-  color: white;
-}
-#instagram {
-  animation-delay: 0.6s;
-  color: white;
-}
-#github {
-  animation-delay: 0.1s;
-  color: white;
-}
-
-@keyframes animate {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-
 
 .u-section-2 .u-image-2 {
   background-image: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("images/7421238-HSC00001-7.jpg");
@@ -835,6 +746,95 @@
 @media (max-width: 575px) {
   .u-section-5 .u-form-1 {
     width: 340px;
+  }
+}
+
+.u-text-back{
+  padding-top: 0.8em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  /* margin-top: 1.5em; */
+  color: white; 
+  font-family: Caveat; 
+  font-size: 35px; 
+  /* font-weight: bold; */
+  /* word-wrap: break-word; */
+  /*width: 0.1em; */
+  line-height: 1;
+}
+
+.facebook-icon {
+  position: absolute; 
+  right: 18px; 
+  bottom: -1px; 
+  font-size: 60px;
+  display: inline-block;
+  padding: 1px 1  9px;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 10px #0072ff, 0 0 10px #0072ff, 0 0 10px #0072ff,
+    0 0 50px #0072ff;
+}
+.facebook-icon:hover {
+  animation: animate 3s linear infinite;
+}
+
+
+.instagram-icon {
+  position: absolute;
+  right: 45px;
+  bottom: 7.6px;
+  font-size: 60px;
+  display: inline-block;
+  padding: 1px 1 9px;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 10px #ff00bf, 0 0 10px #ff00bf, 0 0 10px #ff00bf,
+    0 0 50px #ff00bf;
+}
+.instagram-icon:hover {
+  animation: animate 3s linear infinite;
+}
+
+.github-icon{
+  position: absolute;
+  right: 160px;
+  bottom: -2px;
+  font-size: 60px;
+  display: inline-block;
+  padding: 1px 1 9px;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 10px #111111, 0 0 10px #111111, 0 0 10px #111111,
+    0 0 50px #111111;
+}
+.github-icon:hover {
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 10px #929292, 0 0 10px #929292, 0 0 10px #929292,
+    0 0 50px #929292;
+  color: black;
+}
+
+
+#twitter {
+  animation-delay: 0.3s;
+}
+#facebook {
+  animation-delay: 0.7s;
+  color: white;
+}
+#instagram {
+  animation-delay: 0.6s;
+  color: white;
+}
+#github {
+  animation-delay: 0.1s;
+  color: white;
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
   }
 }
 

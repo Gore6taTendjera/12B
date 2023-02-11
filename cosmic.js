@@ -4,7 +4,7 @@ window.onload = function () {
         c = canvas.getContext("2d"),
         particles = {},
         particleIndex = 0,
-        particleNum = 5;
+        particleNum = 3;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -30,7 +30,7 @@ window.onload = function () {
         this.id = particleIndex;
         this.life = 0;
         this.size = Math.random() * 2;
-        this.maxlife = Math.random() * 999; // Stars are set to have a random life length right now, but you can shorten this or make it longer
+        this.maxlife = Math.random() * 200; // Stars are set to have a random life length right now, but you can shorten this or make it longer
         this.color = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
 
     }

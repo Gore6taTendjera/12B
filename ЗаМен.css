@@ -52,8 +52,8 @@
 }
 
 .u-section-1 .u-image-1 {
-  width: 390px;
-  height: 379px;
+  width: 450px;
+  height: 450px;
   margin: 154px auto 0;
 }
 
@@ -120,7 +120,7 @@
 
 
 .css-selector {
-  background: linear-gradient(-10deg, #00286b, #01183e, #000000);
+  background: linear-gradient(-10deg, #00276b, #01183e, #000000);
   background-size: 600% 600%;
 
   -webkit-animation: AnimationName 25s ease infinite;
@@ -167,9 +167,6 @@
 
 
 
-
-
-
 .text-focus-in {
 	animation: text-focus-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
@@ -195,9 +192,6 @@
     opacity: 1;
   }
 }
-
-
-
 
 
 
@@ -238,10 +232,6 @@
 }
 
 
-
-
-
-
 .text-shadow-drop-center {
 	animation: text-shadow-drop-center 0.8s cubic-bezier(0.190, 0.1, 0.220, 0.1) 10 alternate both;
 }
@@ -255,3 +245,9 @@
   }
 }
 
+
+canvas {
+  border: 1px solid black;
+  height: 200%;
+  width: 200%;
+}

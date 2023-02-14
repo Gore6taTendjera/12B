@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <meta name="keywords" content="12В КЛАС, Абитюриенски Бал">
+  <meta name="keywords" content="12В КЛАС, Абитуриентски бал">
   <meta name="description" content="">
   <title>12В КЛАС</title>
   <link rel="stylesheet" href="asd.css" media="screen">
@@ -12,7 +12,7 @@
  
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="asd.js" defer=""></script>
-  <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
+  <meta name="generator" content="12vkttpgbt.ml, 12vkttpgbt.ml">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
   <link id="u-page-google-font" rel="stylesheet"
@@ -236,6 +236,136 @@
         <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item"
           src="https://www.youtube.com/embed/m1YUmZRfgqU?playlist=m1YUmZRfgqU&amp;loop=1&amp;mute=1&amp;showinfo=0&amp;controls=0&amp;start=0&amp;autoplay=1"
           data-autoplay="1" frameborder="0" allowfullscreen=""></iframe>
+          <!-- <canvas class="embed-responsive embed-responsive-1" style="background-color: black; " id="canvas">Canvas not supported.</canvas> -->
+          <script>
+
+
+(function () {
+  'use strict';
+  window.addEventListener('load', function () {
+    var canvas = document.getElementById('canvas');
+
+    if (!canvas || !canvas.getContext) {
+      return false;
+    }
+
+    function rand(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+  
+    var ctx = canvas.getContext('2d');
+    var X = canvas.width = window.innerWidth;
+    var Y = canvas.height = window.innerHeight;
+    var mouseX = null;
+    var mouseY = null;
+    var shapeNum = 1000;
+    var shapes = [];
+    var style = {
+      black: 'black',
+      white: 'white',
+      red: 'red',
+      lineWidth: 1,
+    };
+
+    window.requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function(cb) {
+        setTimeout(cb, 99);
+      };
+
+    function Shape(ctx, x, y) {
+      this.ctx = ctx;
+      this.init(x, y);
+    }
+    
+    Shape.prototype.init = function(x, y) {
+      this.x = x;
+      this.y = y;
+      this.r = rand(12, 1);
+      this.ga = Math.random() * Math.random() * Math.random() * Math.random();
+      this.v = {
+        x: Math.random(),
+        y: -1
+      };
+      this.l = rand(1, 100);
+      this.sl = this.l;
+    };
+
+    Shape.prototype.updateParams = function() {
+      var ratio = this.l / this.sl;
+      //this.r *= ratio;
+      this.l -= 3;
+      if (this.l < 0) {
+        this.init(X * (Math.random() + Math.random()) / 2, rand(0, Y));
+      }
+    };
+
+    Shape.prototype.updatePosition = function() {
+      this.x += Math.random();
+      this.y += -Math.random();
+    };
+    
+    Shape.prototype.draw = function() {
+      var ctx  = this.ctx;
+      ctx.save();
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.globalAlpha = this.ga;
+      //ctx.fillStyle = 'rgb(123, 252, 100)';
+      ctx.fillStyle = 'gold';
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 9, false);
+      ctx.fill();
+      ctx.restore();
+    };
+
+    Shape.prototype.render = function(i) {
+      this.updatePosition();
+      this.updateParams();
+      this.draw();
+    };
+
+    for (var i = 0; i < shapeNum; i++) {
+      var s = new Shape(ctx, X * (Math.random() + Math.random()) / 2, rand(0, Y));
+      shapes.push(s);
+    }
+
+    function render() {
+      ctx.clearRect(0, 0, X, Y);
+      for (var i = 0; i < shapes.length; i++) {
+        shapes[i].render(i);
+      }
+      requestAnimationFrame(render);
+    }
+
+    render();
+    
+    function onResize() {
+      X = canvas.width = window.innerWidth;
+      Y = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', function() {
+      onResize();
+    });
+
+    window.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    }, false);
+
+  });
+})();
+
+            
+          </script>
+          <style>
+            canvas#canvas {
+              display: block;
+            }
+          </style>
       </div>
     </div>
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -275,16 +405,16 @@
       </div>
     </div>
   </section>
-  <section class="skrollable u-align-center u-border-6 u-border-palette-3-base u-clearfix u-image u-section-5"
-    id="sec-47be" data-image-width="3840" data-image-height="2160">
-    <div class="stars"></div>
-    <div class="twinkling"></div> 
+  <script src="cosmic.js"></script>
+  <section class="skrollable u-align-center u-border-6 u-border-palette-3-base u-clearfix u-image u-section-5" id="sec-47be" data-image-width="3840" data-image-height="2160">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h2 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-default u-text-1">Абитюриенски Бал
-      </h2>
-      <h3 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-2"><span
-          class="u-icon"></span>&nbsp;25.05.2023
-      </h3>
+      <div>
+        <canvas id="motion" class="u-align-center u-container-style u-list-item u-repeater-item" 
+        style="z-index: -1; left: 0; top: 0; width: 100%; height: 100%; position: absolute;">
+        </canvas>
+      </div>
+      <h2 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-default u-text-1">Абитуриентски бал</h2>
+      <h3 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-2"><span class="u-icon"></span>&nbsp;25.05.2023</h3>
       <h3 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-3">Остават: </h3>
       <div class="u-expanded-width u-list u-list-1">
         <div class="u-repeater u-repeater-1">
@@ -300,7 +430,7 @@
             <div class="u-container-layout u-similar-container u-container-layout-2">
               <h3 id="hours" class="u-custom-font u-font-ubuntu u-text u-text-custom-color-4 u-text-default u-text-6">00
               </h3>
-              <h4 class="u-custom-font u-font-ubuntu u-text u-text-custom-color-1 u-text-default u-text-7">Часове</h4>
+              <h4 class="u-custom-font u-font-ubuntu u-text u-text-custom-color-1 u-text-default u-text-7">Часа</h4>
             </div>
           </div>
           <div class="u-align-center u-container-style u-list-item u-repeater-item">

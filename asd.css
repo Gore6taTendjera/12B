@@ -38851,6 +38851,7 @@ a.u-link.u-text-hover-grey-90:hover {
 /*end-variables sitestylecss*/
 .u-header .u-sheet-1 {
   min-height: 120px;
+  max-height: 120px;
 }
 
 .u-header .u-menu-1 {
@@ -38952,7 +38953,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-footer .u-sheet-1 {
-  min-height: 120px;
+  min-height: 20px;
 }
 
 .u-footer .u-text-1 {

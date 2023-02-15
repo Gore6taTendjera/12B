@@ -89,7 +89,12 @@
 }
 
 .u-section-2 .u-text-1 {
-  margin: 375px 2px 0 28px;
+  margin: 380px 2px 0 20px;
+  padding-left: -30px !important;
+  font-family: "Lobster";
+  font-weight: bold;
+  outline: 10px red;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
 .u-section-2 .u-image-2 {
@@ -259,6 +264,8 @@
   .u-section-2 .u-text-1 {
     margin-left: 0;
     margin-right: 0;
+    font-size: 30px;
+    padding-left: -30px;
   }
 
   .u-section-2 .u-text-2 {
@@ -339,7 +346,7 @@
   }
 
   .u-section-2 .u-container-layout-1 {
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 30px;
   }
 

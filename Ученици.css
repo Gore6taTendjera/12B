@@ -882,12 +882,3 @@
   color: rgb(255, 255, 255);
   transform: rotateY(180deg);
 }
-
-.headerArrow {
-  filter: brightness(0) invert(1);
-}
-
-.headerArrow:hover {
-  transition: all 0.3s ease-in-out;
-filter: drop-shadow(0 0 1.75rem rgb(211, 211, 211)) brightness(0) invert(1);
-}

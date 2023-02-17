@@ -90,9 +90,18 @@
   .u-section-1 .u-text-1 {
     font-size: 3.75rem;
   }
-  .u-section-1 .u-text-3 .u-text-5{
-    font-size: 26px !important;
+  .u-text-2{
+    font-size: 50px !important;
+  }
+  .u-text-4{
+    font-size: 50px !important;
+  }
+  .u-text-3 {
+    font-size: 24px !important;
     }
+  .u-text-5{
+  font-size: 24px !important;
+  }
 }
 
 @media (max-width: 575px) {

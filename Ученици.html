@@ -738,30 +738,21 @@
 
 <script>
 function openFacebook(url) {
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  const isAndroid = /Android/.test(navigator.userAgent);
-  const fbIdMatch = url.match(/\/(\d+)$/);
+  const appLink = `fb://profile?id=${url.substring(url.lastIndexOf('/') + 1)}`;
+  const fallbackLink = url;
 
-  if (isIOS) {
-    if (fbIdMatch) {
-      window.location.href = `fb://profile?id=${fbIdMatch[1]}`;
-    } else {
-      window.location.href = 'fb://';
-    }
-    setTimeout(() => {
-      window.location.href = url;
-    }, 25);
-  } else if (isAndroid) {
-    if (fbIdMatch) {
-      window.location.href = `intent://profile?id=${fbIdMatch[1]}#Intent;package=com.facebook.katana;scheme=fb;end`;
-    } else {
-      window.location.href = 'intent://#Intent;package=com.facebook.katana;scheme=fb;end';
-    }
-    setTimeout(() => {
-      window.location.href = url;
-    }, 25);
+  const isIos = /iP(hone|od|ad)/.test(navigator.userAgent);
+  const isAndroid = /Android/.test(navigator.userAgent);
+
+  if (isIos || isAndroid) {
+    // Try to open the app
+    window.location.href = appLink;
+
+    // If the app is not installed or cannot be opened, open the fallback link
+    setTimeout(() => { window.location.href = fallbackLink; }, 500);
   } else {
-    window.open(url, '_blank');
+    // Open the fallback link in a new tab
+    window.open(fallbackLink, '_blank');
   }
 }
 </script>

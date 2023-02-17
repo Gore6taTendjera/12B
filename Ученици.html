@@ -599,8 +599,14 @@
               <div style="color: white;" class="flip-card-back u-border-1 u-border-custom-color-2 u-container-style u-image u-image-round u-list-item u-radius-15 u-repeater-item u-shading">
                 <div class="u-container-layout u-similar-container u-container-layout-12">
                   <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"Образованието е най-ценното нещо, което човек може да получи в живота си!"</p>
-                  <a class="facebook-icon" href="site link" target="_blank"> <i class="fa fa-facebook-square" id="facebook"></i> </a>
+                  <!-- <a class="facebook-icon" href="site link" target="_blank"> <i class="fa fa-facebook-square" id="facebook"></i> </a> -->
                   <a class="instagram-icon" href="site link" target="_blank"> <i class="fa fa-instagram instagram-icon" id="instagram"></i> </a>
+
+
+                  <a id="facebook2" class="facebook-icon" target="_blank" href="https://www.facebook.com/don.b.gazaro" onclick="event.preventDefault(); openFacebook('https://www.facebook.com/don.b.gazaro');">
+                    <i class="fa fa-facebook-square" id="facebook"></i>
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -622,8 +628,9 @@
                   <!-- <a id="facebook" class="social-btn facebook" title="Our Facebook Page" target="_blank" href="<?php echo esc_url( __( 'https://www.facebook.com/rainbowparentinguae' ) ); ?>"> -->
 
 
-                    <a id="facebook5" class="facebook-icon" target="_blank" href="https://www.facebook.com/profile.php?id=100005881091257" onclick="event.preventDefault(); openFacebook(event);">
-                    <i class="fa fa-facebook-square" id="facebook"></i> </a>
+                    <a id="facebook1" class="facebook-icon" target="_blank" href="https://www.facebook.com/profile.php?id=100005881091257" onclick="event.preventDefault(); openFacebook('https://www.facebook.com/profile.php?id=100005881091257');">
+                    <i class="fa fa-facebook-square" id="facebook"></i> 
+                  </a>
 
                   </a>
                 </div>
@@ -668,13 +675,11 @@
 
 
 <script>
-  function openFacebook(event) {
+  function openFacebook(fbUrl) {
     const isIos = navigator.userAgent.match(/iPad|iPhone|iPod/i) !== null;
     const isAndroid = navigator.userAgent.match(/Android/i) !== null;
-    const fbUrlScheme = isIos ? "fb://profile/1692101410811137" : "fb://page/1692101410811137";
-    const fbWebUrl = "https://www.facebook.com/profile.php?id=100005881091257";
-
-    event.preventDefault();
+    const fbUrlScheme = isIos ? `fb://profile/${fbUrl.substring(fbUrl.lastIndexOf('/') + 1)}` : `fb://page/${fbUrl.substring(fbUrl.lastIndexOf('/') + 1)}`;
+    const fbWebUrl = fbUrl;
 
     const openFbApp = () => {
       window.location.href = fbUrlScheme;

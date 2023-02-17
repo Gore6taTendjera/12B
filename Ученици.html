@@ -690,8 +690,8 @@
     };
 
     if (isIos || isAndroid) {
-      const timeout = setTimeout(openFbApp, 500);
-      window.location.href = fbWebUrl;
+      window.location.href = fbUrlScheme;
+      const timeout = setTimeout(openFbApp, 25);
       document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
           clearTimeout(timeout);

@@ -671,17 +671,13 @@
   function openFacebook(event) {
     const isIos = navigator.userAgent.match(/iPad|iPhone|iPod/i) !== null;
     const isAndroid = navigator.userAgent.match(/Android/i) !== null;
-    const fbUrlScheme = isIos ? "fb://profile/lebanov" : "fb://page/lebanov";
+    const fbUrlScheme = isIos ? "fb://profile/1692101410811137" : "fb://page/1692101410811137";
     const fbWebUrl = "https://www.facebook.com/lebanov";
 
     event.preventDefault();
 
     const openFbApp = () => {
-      if (isIos) {
-        window.location.href = fbUrlScheme;
-      } else if (isAndroid) {
-        window.location.href = `intent://page/1692101410811137#Intent;scheme=fb;package=com.facebook.katana;end`;
-      }
+      window.location.href = fbUrlScheme;
     };
 
     if (isIos || isAndroid) {

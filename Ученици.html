@@ -750,7 +750,7 @@ function openFacebook(url) {
     }
     setTimeout(() => {
       window.location.href = url;
-    }, 1000);
+    }, 25);
   } else if (isAndroid) {
     if (fbIdMatch) {
       window.location.href = `intent://profile?id=${fbIdMatch[1]}#Intent;package=com.facebook.katana;scheme=fb;end`;
@@ -759,7 +759,7 @@ function openFacebook(url) {
     }
     setTimeout(() => {
       window.location.href = url;
-    }, 1000);
+    }, 25);
   } else {
     window.open(url, '_blank');
   }

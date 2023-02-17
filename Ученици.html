@@ -622,8 +622,9 @@
                   <!-- <a id="facebook" class="social-btn facebook" title="Our Facebook Page" target="_blank" href="<?php echo esc_url( __( 'https://www.facebook.com/rainbowparentinguae' ) ); ?>"> -->
 
 
-                    <a id="facebook5" class="facebook-icon" target="_blank" href="<?php echo esc_url( __( 'https://www.facebook.com/lebanov' ) ); ?>" onclick="event.preventDefault(); openFacebook(event);">
+                    <a id="facebook5" class="facebook-icon" target="_blank" href="https://www.facebook.com/lebanov" onclick="event.preventDefault(); openFacebook(event);">
                     <i class="fa fa-facebook-square" id="facebook"></i> </a>
+
                   </a>
                 </div>
               </div>
@@ -668,18 +669,31 @@
 
 <script>
   function openFacebook(event) {
-    const IS_IOS = (navigator.userAgent.match(/iPad|iPhone|iPod/i) !== null);
-    const IS_ANDROID = (navigator.userAgent.match(/Android/i) !== null);
-    const appLink = IS_IOS ? "fb://profile/lebanov" : "fb://page/lebanov";
-    const fallbackLink = "https://www.facebook.com/lebanov";
+    const isIos = navigator.userAgent.match(/iPad|iPhone|iPod/i) !== null;
+    const isAndroid = navigator.userAgent.match(/Android/i) !== null;
+    const fbUrlScheme = isIos ? "fb://profile/lebanov" : "fb://page/lebanov";
+    const fbWebUrl = "https://www.facebook.com/lebanov";
 
-    if (IS_IOS || IS_ANDROID) {
-      window.location.href = appLink;
-      setTimeout(() => {
-        window.location.href = fallbackLink;
-      }, 500);
+    event.preventDefault();
+
+    const openFbApp = () => {
+      if (isIos) {
+        window.location.href = fbUrlScheme;
+      } else if (isAndroid) {
+        window.location.href = `intent://page/1692101410811137#Intent;scheme=fb;package=com.facebook.katana;end`;
+      }
+    };
+
+    if (isIos || isAndroid) {
+      const timeout = setTimeout(openFbApp, 500);
+      window.location.href = fbWebUrl;
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+          clearTimeout(timeout);
+        }
+      });
     } else {
-      window.open(fallbackLink, "_blank");
+      window.open(fbWebUrl, "_blank");
     }
   }
 </script>

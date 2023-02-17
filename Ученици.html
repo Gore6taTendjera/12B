@@ -616,8 +616,15 @@
               <div style="color: white;" class="flip-card-back u-border-1 u-border-custom-color-2 u-container-style u-image u-image-round u-list-item u-radius-15 u-repeater-item u-shading">
                 <div class="u-container-layout u-similar-container u-container-layout-13">
                   <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"Образованието е най-ценното нещо, което човек може да получи в живота си!"</p>
-                  <a class="facebook-icon" href="site link" target="_blank"> <i class="fa fa-facebook-square" id="facebook"></i> </a>
+                  <!-- <a class="facebook-icon" href="site link" target="_blank"> <i class="fa fa-facebook-square" id="facebook"></i> </a> -->
                   <a class="instagram-icon" href="site link" target="_blank"> <i class="fa fa-instagram instagram-icon" id="instagram"></i> </a>
+                    
+                  <!-- <a id="facebook" class="social-btn facebook" title="Our Facebook Page" target="_blank" href="<?php echo esc_url( __( 'https://www.facebook.com/rainbowparentinguae' ) ); ?>"> -->
+
+
+                    <a id="facebook5" class="facebook-icon" target="_blank" href="<?php echo esc_url( __( 'https://www.facebook.com/lebanov' ) ); ?>" onclick="event.preventDefault(); openFacebook(event);">
+                    <i class="fa fa-facebook-square" id="facebook"></i> </a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -657,3 +664,22 @@
   </footer>
 </body>
 </html>
+
+
+<script>
+  function openFacebook(event) {
+    const IS_IOS = (navigator.userAgent.match(/iPad|iPhone|iPod/i) !== null);
+    const IS_ANDROID = (navigator.userAgent.match(/Android/i) !== null);
+    const appLink = IS_IOS ? "fb://profile/lebanov" : "fb://page/lebanov";
+    const fallbackLink = "https://www.facebook.com/lebanov";
+
+    if (IS_IOS || IS_ANDROID) {
+      window.location.href = appLink;
+      setTimeout(() => {
+        window.location.href = fallbackLink;
+      }, 500);
+    } else {
+      window.open(fallbackLink, "_blank");
+    }
+  }
+</script>

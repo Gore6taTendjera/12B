@@ -218,14 +218,16 @@
                 </div>
               </div>
               <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
-              <div style="color: white;" class="flip-card-back u-border-1 u-border-custom-color-2 u-container-style u-image u-image-round u-list-item u-radius-15 u-repeater-item u-shading">
-                <div class="u-container-layout u-similar-container u-container-layout-4">
-                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"Образованието е най-ценното нещо, което човек може да получи в живота си!"</p>
+              <div class="flip-card-back u-border-1 u-border-custom-color-2 u-container-style u-image u-image-round u-list-item u-radius-15 u-repeater-item u-shading" style="background-image: url('images/BT.png');">
+                <div class="u-container-layout u-similar-container u-container-layout-4" style="position: relative;">
+                  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); border-radius: 15px" class="u-border-custom-color-2" ></div>
+                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back u-align-center">"Образованието е най-ценното нещо, което човек може да получи в живота си!"</p>
                   <a class="facebook-icon" href="site link" target="_blank"> <i class="fa fa-facebook-square" id="facebook"></i> </a>
                   <a class="instagram-icon" href="site link" target="_blank"> <i class="fa fa-instagram instagram-icon" id="instagram"></i> </a>
                   <a class="github-icon" href="https://github.com/WindSlashKing" target="_blank"> <i class="fa fa-github-square github" id="github"></i> </a>
                 </div>
               </div>
+              
             </div>
           </div>
           <div class="flip-card">
@@ -323,17 +325,17 @@
               <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
               <div style="color: white;" class="flip-card-back u-border-1 u-border-custom-color-2 u-container-style u-image u-image-round u-list-item u-radius-15 u-repeater-item u-shading">
                 <div class="u-container-layout u-similar-container u-container-layout-10">
-                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"От тея 5 години, 3 бяха загуба на време!"</p>
+                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back u-align-center">"От тея 5 години, 3 бяха загуба на време!"</p>
                   <img src="https://i2.offnews.bg/events/2017/12/14/671214/phpy4efid.jpg" style="width:50%; align-self: center; border-radius: 50px;" alt="Italian Trulli">
-                  <button onclick="playAudio(event)" type="button" style="color:white; background-color: black;">ЧУЙ МЕ</button>
+                  <button onclick="playAudio(event)" type="button" style="color:white; background-color: black; position: absolute; bottom: 25px; left: 10px;">ЧУЙ МЕ</button>
                   <audio id="myAudio">
                     <source src="sound/fart.mp3" type="audio/mpeg">
                   </audio>
-                  
                   <a class="facebook-icon" href="site link" target="_blank"> <i class="fa fa-facebook-square" id="facebook"></i> </a>
                   <a class="instagram-icon" href="site link" target="_blank"> <i class="fa fa-instagram instagram-icon" id="instagram"></i> </a>
                 </div>
               </div>
+              
             </div>
           </div>
           <div class="flip-card">
@@ -650,19 +652,31 @@
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $(".flip-card").click(function(){
-      $(this).toggleClass("active");
+  <script>
+    $(document).ready(function(){
+      $(".flip-card").click(function(){
+        $(this).toggleClass("active");
+      });
+  
+      $("#myButton").mousedown(function() {
+        var x = document.getElementById("myAudio");
+        x.currentTime = 0;
+        x.play();
+      });
+  
+      $("#myButton").mouseup(function() {
+        var x = document.getElementById("myAudio");
+        x.pause();
+      });
     });
-  });
-
-  function playAudio(event) {
-    event.stopPropagation();
-    var x = document.getElementById("myAudio");
-    x.play();
-  } 
-</script>
+  
+    function playAudio(event) {
+      event.stopPropagation();
+      var x = document.getElementById("myAudio");
+      x.currentTime = 0;
+      x.play();
+    } 
+  </script>
   
   <footer class="u-align-center u-clearfix u-footer u-grey-75 u-footer" id="sec-354b">
     <div class="u-clearfix u-sheet u-sheet-1">

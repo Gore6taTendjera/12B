@@ -89,11 +89,11 @@
 }
 
 .u-section-2 .u-text-1 {
-  margin: 380px 2px 0 20px;
+  margin: 388px 2px 0 18px;
   padding-left: -30px !important;
-  font-family: "Lobster";
+  /* font-family: "Lobster"; */
   font-weight: bold;
-  outline: 10px red;
+  /* outline: 10px red; */
   text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
@@ -898,4 +898,10 @@
   background-color: #666666;
   color: rgb(255, 255, 255);
   transform: rotateY(180deg);
+}
+
+.BT{
+  background-image:  url("images/BT.png");
+  background-position: 50% 50%;
+  /* opacity: 1; */
 }

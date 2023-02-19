@@ -905,3 +905,28 @@
   background-position: 50% 50%;
   /* opacity: 1; */
 }
+
+
+
+
+
+.fartButton{
+  bottom: 10px; 
+  left: 5px;
+  cursor: pointer;
+  background-color: rgb(112, 112, 112); 
+  border: 5px solid rgb(255, 255, 255); 
+  border-radius: 5px; 
+  font-size: 16px; 
+  font-weight: bold;
+  position: absolute; 
+  bottom: 24px; 
+  left: 20px;
+  display: block;
+
+}
+
+.fartButton:hover{
+  background: black;
+  cursor: pointer;
+}

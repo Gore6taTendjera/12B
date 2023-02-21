@@ -908,12 +908,12 @@
 
 
 .fartButton{
-  height: 10%;
-  width: 10%;
   bottom: 17px; 
   left: 20px;
   cursor: pointer;
   background-color: rgb(112, 112, 112); 
+  border: 5px solid rgb(255, 255, 255); 
+  border-radius: 5px; 
   font-size: 16px; 
   font-weight: bold;
   position: absolute; 
@@ -925,12 +925,4 @@
 .fartButton:hover{
   background: black;
   cursor: pointer;
-}
-
-
-
-
-.fartbtn{
-  width: 50%;
-  height: 50%;
 }

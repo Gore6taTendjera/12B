@@ -907,12 +907,9 @@
 }
 
 
-
-
-
 .fartButton{
-  bottom: 10px; 
-  left: 5px;
+  bottom: -80px; 
+  left: 20px;
   cursor: pointer;
   background-color: rgb(112, 112, 112); 
   border: 5px solid rgb(255, 255, 255); 
@@ -920,9 +917,8 @@
   font-size: 16px; 
   font-weight: bold;
   position: absolute; 
-  bottom: 24px; 
-  left: 20px;
   display: block;
+  padding: 8px;
 
 }
 

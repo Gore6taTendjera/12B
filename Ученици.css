@@ -895,7 +895,7 @@
 }
 
 .flip-card-back {
-  background-color: #666666;
+  background-color: #371414;
   color: rgb(255, 255, 255);
   transform: rotateY(180deg);
 }
@@ -925,4 +925,13 @@
 .fartButton:hover{
   background: black;
   cursor: pointer;
+}
+
+
+
+.u-text-2{
+  font-family: 'Shantell Sans' !important;
+  line-height: 38px !important;
+  font-size: 30px !important;
+  text-align: center !important;
 }

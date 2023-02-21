@@ -329,7 +329,7 @@
                   <img src="https://i2.offnews.bg/events/2017/12/14/671214/phpy4efid.jpg" style="width:50%; border-radius: 50px;" alt="Italian Trulli" class="u-align-center"></img>
 
               
-                  <button onclick="playAudio(event)" type="button" class="fartButton" style="color:white;">ЧУЙ МЕ</button>
+                  <button onclick="playAudio()" ontouchstart="playAudio()" type="button" class="fartButton" style="color:white;">ЧУЙ МЕ</button>
          
                   <audio id="myAudio">
                     <source src="sound/fart.mp3" type="audio/mpeg">
@@ -656,51 +656,50 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script>
-$(document).ready(function(){
-  $(".flip-card").click(function(event){
-    if (event.target.tagName === 'BUTTON' || event.target.parentElement.tagName === 'A') {
-      return;
+  $(document).ready(function(){
+    $(".flip-card").click(function(event){
+      if (event.target.tagName === 'BUTTON' || event.target.parentElement.tagName === 'A') {
+        return;
+      }
+      $(this).toggleClass("active");
+    });
+
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      $("#myButton").on("touchstart", function() {
+        var x = document.getElementById("myAudio");
+        x.currentTime = 0;
+        x.play();
+      });
+    } else {
+      $("#myButton").on("mousedown", function() {
+        var x = document.getElementById("myAudio");
+        x.currentTime = 0;
+        x.play();
+      });
+
+      $("#myButton").on("mouseup", function() {
+        var x = document.getElementById("myAudio");
+        x.pause();
+      });
     }
-    $(this).toggleClass("active");
+    
+    $(".facebook-icon, .instagram-icon").on("mousedown", function(event) {
+      event.stopPropagation();
+    });
   });
 
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
-    $("#myButton").on("touchstart", function() {
-      var x = document.getElementById("myAudio");
-      x.currentTime = 0;
-      x.play();
+  $(document).ready(function(){
+    $('.List li').on('click', function() {
+      $('.Div').slideDown('500');
     });
-  } else {
-    $("#myButton").on("mousedown", function() {
-      var x = document.getElementById("myAudio");
-      x.currentTime = 0;
-      x.play();
-    });
+  });
 
-    $("#myButton").on("mouseup", function() {
-      var x = document.getElementById("myAudio");
-      x.pause();
-    });
+  function playAudio() {
+    var x = document.getElementById("myAudio");
+    x.currentTime = 0;
+    x.play();
   }
-  
-  $(".facebook-icon, .instagram-icon").on("mousedown", function(event) {
-    event.stopPropagation();
-  });
-});
-
-$(document).ready(function(){
-  $('.List li').on('click', function() {
-    $('.Div').slideDown('500');
-  });
-});
-
-function playAudio(event) {
-  event.stopPropagation();
-  var x = document.getElementById("myAudio");
-  x.currentTime = 0;
-  x.play();
-}
   </script>
   
   <footer class="u-align-center u-clearfix u-footer u-grey-75 u-footer" id="sec-354b">

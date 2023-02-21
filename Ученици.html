@@ -329,7 +329,7 @@
                   <img src="https://i2.offnews.bg/events/2017/12/14/671214/phpy4efid.jpg" style="width:50%; border-radius: 50px;" alt="Italian Trulli" class="u-align-center"></img>
 
               
-                  <button onclick="playAudio(event)" ontouchstart="playAudio(event)" ontouchend="playAudio(event)" type="button" class="fartButton" style="color:white;">ЧУЙ МЕ</button>
+                  <button onclick="playAudio(event)" ontouchstart="playAudio(event)" type="button" class="fartButton" style="color:white;">ЧУЙ МЕ</button>
                   
          
                   <audio id="myAudio">
@@ -658,39 +658,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script>
 $(document).ready(function(){
-  $(".flip-card").on("click touchend", function(event){
+  $(".flip-card").click(function(event){
     if (event.target.tagName === 'BUTTON' || event.target.parentElement.tagName === 'A') {
       return;
     }
     $(this).toggleClass("active");
   });
 
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
-    $("#myButton").on("touchstart", function() {
-      var x = document.getElementById("myAudio");
-      x.currentTime = 0;
-      x.play();
-    });
-    $("#myButton").on("touchend", function() {
-      var x = document.getElementById("myAudio");
-      x.pause();
-    });
-  } else {
-    $("#myButton").on("mousedown", function() {
-      var x = document.getElementById("myAudio");
-      x.currentTime = 0;
-      x.play();
-    });
-    $("#myButton").on("mouseup", function() {
-      var x = document.getElementById("myAudio");
-      x.pause();
-    });
-  }
+  $("#myButton").mousedown(function() {
+    var x = document.getElementById("myAudio");
+    x.currentTime = 0;
+    x.play();
+  });
+
+  $("#myButton").mouseup(function() {
+    var x = document.getElementById("myAudio");
+    x.pause();
+  });
   
-  $(".facebook-icon, .instagram-icon").on("mousedown", function(event) {
+  $(".facebook-icon, .instagram-icon").mousedown(function(event) {
     event.stopPropagation();
   });
+
+  $("#myButton").on("touchstart", function(event) {
+    event.stopPropagation();
+    var x = document.getElementById("myAudio");
+    x.currentTime = 0;
+    x.play();
+  });
+
 });
 
 function playAudio(event) {

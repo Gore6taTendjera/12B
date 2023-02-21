@@ -931,7 +931,8 @@
 
 .u-text-2{
   font-family: 'Shantell Sans' !important;
-  line-height: 38px !important;
-  font-size: 30px !important;
+  line-height: 37px !important;
+  font-size: 26px !important;
   text-align: center !important;
+  /* inline-size: 373px; */
 }

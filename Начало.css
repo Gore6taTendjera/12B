@@ -1125,3 +1125,87 @@ animation:move-twink-back 200s linear infinite;
   }
 } */
 
+
+
+
+
+
+html, body { background: hsl(220, 80%, 8%); }
+html { height: 100%; display: flex; }
+body { margin: auto; }
+
+
+
+
+
+
+.glava {
+  position: relative;
+  text-align: center;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+}
+
+.glava .glavaText {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: calc(20vw / var(--word-total) );
+  line-height: 1.0;
+}
+
+.glava .pishe .duma {
+  color: hsl(0, 0%, 80%);
+  text-shadow: 0 0 0.1em currentColor;
+  transform-style: preserve-3d;
+  animation: write linear both;
+}
+
+.glava  .lazer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* To avoid the blur getting masked by the clip-path we had to duplicate the element */
+  filter: blur(4px) contrast(10);
+  pointer-events: none;
+  color: green;
+}
+
+.glava .laser .duma {
+  display: inline-block;
+}
+
+.glava .laser .duma {
+  color: hsl(0, 100%, 75%);
+  text-shadow: 0 0 0.1em currentColor;
+  transform: translateZ(5px);
+  animation: laser linear both;
+  color: black;
+}
+
+.glava .pishe .duma,
+.glava .laser .duma {
+  animation-duration: 4s;
+  animation-delay: calc(0.3s + var(--word-index) * 160ms);
+  animation-iteration-count: infinite;
+}
+
+.glava:hover .duma {
+  animation-play-state: paused;
+}
+
+/* .glava .text .duma,
+.glava .text .duma::before {
+  animation-play-state: paused;
+  animation-delay: -0.4s;
+} */
+
+@keyframes write {
+  from, 30% { clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%) }
+}
+
+@keyframes laser {
+  from, 30% { clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%) }
+}
+

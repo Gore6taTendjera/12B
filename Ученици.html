@@ -934,28 +934,25 @@
 
 <script>
   function openInstagram(igUrl) {
-    const isIos = navigator.userAgent.match(/iPad|iPhone|iPod/i) !== null;
-    const isAndroid = navigator.userAgent.match(/Android/i) !== null;
-    const igUrlScheme = `instagram://user?username=${igUrl.substring(igUrl.lastIndexOf('/') + 1)}`;
-    const igWebUrl = igUrl;
-
-    const openIgApp = () => {
-      window.location.href = igUrlScheme;
-    };
-
+    const appLink = `instagram://user?username=${igUrl.substring(igUrl.lastIndexOf('/') + 1)}`;
+    const fallbackLink = igUrl;
+  
+    const isIos = /iP(hone|od|ad)/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
+  
     if (isIos || isAndroid) {
-      window.location.href = igUrlScheme;
-      const timeout = setTimeout(openIgApp, 25);
-      document.addEventListener("visibilitychange", () => {
-        if (document.visibilityState === "visible") {
-          clearTimeout(timeout);
-        }
-      });
+      // Try to open the app
+      window.location.href = appLink;
+  
+      // If the app is not installed or cannot be opened, open the fallback link
+      setTimeout(() => { window.location.href = fallbackLink; }, 500);
     } else {
-      window.open(igWebUrl, "_blank");
+      // Open the fallback link in a new tab
+      window.open(fallbackLink, '_blank');
     }
   }
-</script>
+  </script>
+  
 
 <script>
 function openFacebook(url) {

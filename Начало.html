@@ -375,7 +375,7 @@
         Класни ръководители</h1>
       <div class="u-expanded-width u-list u-list-1">
         <div class="u-repeater u-repeater-1">
-          <div
+          <div id="cvetkova"
             class="u-align-left-xs u-border-3 u-border-palette-3-base u-container-style u-effect-hover-zoom u-list-item u-repeater-item u-shading u-list-item-1"
             data-image-width="2000" data-image-height="1333">
             <div class="u-background-effect u-expanded">
@@ -389,7 +389,7 @@
                 е най-добрия, моят клас е всичко за мен!</p>
             </div>
           </div>
-          <div
+          <div id="qneva"
             class="u-align-left-xs u-border-3 u-border-palette-3-base u-container-style u-effect-hover-zoom u-list-item u-repeater-item u-shading u-list-item-2"
             data-image-width="2000" data-image-height="1333">
             <div class="u-background-effect u-expanded">
@@ -407,6 +407,80 @@
       </div>
     </div>
   </section>
+
+  <section class="u-clearfix u-gradient u-section-8" id="sec-c79c"style="opacity: 0; display: none;">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h1 class="u-align-center u-custom-font u-font-lobster u-text u-text-default u-text-1">инж. Димитрина Цветкова
+      </h1>
+      <img class="u-align-center-xs u-image u-image-round u-radius-25 u-image-1" src="images/Screenshot_238.png" alt=""
+        data-image-width="301" data-image-height="239">
+      <p
+        class="u-align-justify u-text u-text-body-alt-color u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-2">
+        Из отсрещната улица се понесе насам монотонен писклив хор от детински гласове. Тия гласове държаха бас на друг
+        един по-висок и по-дъртешки глас, който извиваше някаква проточена черковна песен. Странният концерт наближаваше
+        и се чуваше все по-силен. Тозчас се подаде ред деца с фенери, хоръгви и дълги беловоскови свещи, превързани с
+        черни кордели; по тях - други деца вкуп и с тях псалтът Мердевенджиев, последван от попове в одежди. Из въздуха
+        се разнесе и мирис от тамян: задаваше се погребалното шествие на Лалка. Страдалицата беше издъхнала нощес още.
+      </p>
+    </div>
+  </section>
+
+  <section class="u-align-center u-clearfix u-gradient u-section-9" id="carousel_5425"style="opacity: 0; display: none;">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h1
+        class="u-align-center u-custom-font u-font-lobster u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-1">
+        инж. Пенка Янева</h1>
+      <img class="u-align-center-xs u-image u-image-round u-radius-25 u-image-1"
+        src="images/283936220_10209688800334594_226350993447570932_n.jpg" alt="" data-image-width="329"
+        data-image-height="373">
+      <p
+        class="u-align-justify u-text u-text-body-alt-color u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-2">
+        Из отсрещната улица се понесе насам монотонен писклив хор от детински гласове. Тия гласове държаха бас на друг
+        един по-висок и по-дъртешки глас, който извиваше някаква проточена черковна песен. Странният концерт наближаваше
+        и се чуваше все по-силен. Тозчас се подаде ред деца с фенери, хоръгви и дълги беловоскови свещи, превързани с
+        черни кордели; по тях - други деца вкуп и с тях псалтът Мердевенджиев, последван от попове в одежди. Из въздуха
+        се разнесе и мирис от тамян: задаваше се погребалното шествие на Лалка. Страдалицата беше издъхнала нощес още.
+      </p>
+    </div>
+  </section>
+  
+
+
+  <script>
+    const randomImage1 = document.getElementById("cvetkova");
+    const randomImage2 = document.getElementById("qneva");
+    const imageContainer = document.getElementById("sec-c79c");
+    const imageContainer2 = document.getElementById("carousel_5425");
+  
+    randomImage1.addEventListener("click", function () {
+      toggleSection(imageContainer);
+    });
+  
+    randomImage2.addEventListener("click", function () {
+      toggleSection(imageContainer2);
+    });
+  
+    function toggleSection(container) {
+      if (container.style.display === "none") {
+        container.style.display = "block"; /* show the section */
+        container.style.opacity = "0"; /* set the initial opacity to 0 */
+        setTimeout(() => {
+          container.style.opacity = "1"; /* gradually change the opacity to 1 */
+        }, 50); /* wait a short time before changing the opacity */
+      } else {
+        container.style.opacity = "0"; /* gradually change the opacity to 0 */
+        setTimeout(() => {
+          container.style.display = "none"; /* hide the section */
+        }, 500); /* wait for the transition to complete before hiding the section */
+      }
+    }
+  </script>
+
+
+
+
+
+
   <script src="cosmic.js"></script>
   <section class="skrollable u-align-center u-border-6 u-border-palette-3-base u-clearfix u-image u-section-5" id="sec-47be" data-image-width="3840" data-image-height="2160">
     <div class="u-clearfix u-sheet u-sheet-1">

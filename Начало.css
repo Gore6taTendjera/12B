@@ -486,6 +486,25 @@
 
 
 
+.u-section-4 .u-text-1 {
+  font-size: 4.5rem;
+  margin: 65px auto 0;
+  text-shadow: 0 0 20px black;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #d4af37, 0 0 40px #d4af37, 0 0 50px #d4af37, 0 0 60px #000000, 
+  }
+  to {
+    text-shadow: 0 0 30px #fff, 0 0 45px #ffd700, 0 0 50px #ffd700, 0 0 90px #ffd700;
+  }
+}
+
+
 
 
 

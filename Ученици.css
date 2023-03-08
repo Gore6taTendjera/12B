@@ -905,7 +905,10 @@
   background-position: 50% 50%;
   /* opacity: 1; */
 }
-
+.saho{
+  background-image:  url("images/alfa.png");
+  background-position: 50% 50%;
+}
 
 .fartButton{
   bottom: 17px; 

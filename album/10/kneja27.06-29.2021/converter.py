@@ -8,10 +8,10 @@ if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
 for filename in os.listdir(img_folder):
-    if filename.endswith('.jpg'):
+    if filename.endswith('.jpg') or filename.endswith('.png'):
         with Image.open(filename) as im:
             output_filename = os.path.splitext(filename)[0] + '.webp'
             output_path = os.path.join(output_folder, output_filename)
             im.save(output_path, 'webp')
 
-print('All JPEG files in the folder have been converted to WEBP format and saved in the ' + output_folder + ' folder.')
+print('All JPEG and PNG files in the folder have been converted to WEBP format and saved in the ' + output_folder + ' folder.')

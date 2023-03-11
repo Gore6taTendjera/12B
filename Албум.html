@@ -308,26 +308,17 @@
         <a href="blocks.mp4" data-ngthumb="blocks_mp4_t.jpg">Blocks video MP4</a>
         <a href="blocks.webm" data-ngthumb="blocks_webm_t.jpg">Blocks video WEBM</a> -->
         <div id="nanogallery4">
-          <a href="album/8/final/video1.mp4" data-ngThumb="album/8/final/videoimage.webp" data-ngthumb-width="200" data-ngthumb-height="200">
+          <a href="album/8/final/video1.mp4" class="video-link" data-ngThumb="album/8/final/videoimage.webp">
               Video Title
           </a>
       </div>
-      
-      <script type="text/javascript">
-          jQuery("#nanogallery2").nanogallery2({
-              items: [
-                  {
-                      src: 'path/to/video.mp4',
-                      title: 'Video Title',
-                      kind: 'video',
-                      thumb: 'path/to/thumbnail.jpg',
-                      srct: 'video/mp4'
-                  }
-              ]
-          });
-    
-      </script>
-      
+      <style>
+        @media (max-width: 767px) {
+          .video-link[data-ngThumb] {
+            display: none;
+          }
+        }        
+      </style>
       </div>
     </div>
   </section>

@@ -299,7 +299,7 @@
         <a href="album/8/final/122.webp"></a>
         <a href="album/8/final/123.webp"></a>
         <a href="album/8/final/124.webp"></a>
-        <a href="album/8/final/125.webp"></a>
+        <a href="album/8/final/125.webp" id="my-image"></a>
 
         <a href="album/8/final/video1.webm"></a>
 
@@ -325,11 +325,9 @@
                   }
               ]
           });
+    
       </script>
       
-
-
-
       </div>
     </div>
   </section>
@@ -441,7 +439,7 @@
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-custom-font u-font-lobster u-text u-text-default u-text-1">12 клас</h2>
       <div class="galeriq u-gallery" id="galeriq12" style="margin-top: 75px; margin-bottom: 75px;">
-        <a href="album/8/final/1.webp"></a>
+        <!-- <a href="album/8/final/1.webp"></a>
         <a href="album/8/final/2.webp"></a>
         <a href="album/8/final/3.webp"></a>
         <a href="album/8/final/4.webp"></a>
@@ -452,6 +450,16 @@
         <a href="album/8/final/9.webp"></a>
 
 
+
+
+
+
+
+
+        <a href="album/8/final/1.webp"></a>
+        <a href="album/8/final/2.webp"></a>
+        <a href="album/8/final/3.webp"></a>
+        <a href="album/8/final/4.webp"></a> -->
         <!-- <a href="album/video.mp4"></a>
 
         <a href="berlin2.jpg" data-ngthumb="berlin2_t.jpg">Berlin 2</a>
@@ -471,18 +479,26 @@
         thumbnailDisplayTransitionDuration: 500,
         thumbnailDisplayInterval: 100,
         thumbnailDisplayOutsideScreen: false,
+        thumbnailDisplayCopyToClipboard: true,
+        viewerCopyToClipboard: true,
+        clipboardCopy: true,
         galleryDisplayTransition: "rotateX",
         thumbnailHoverEffect2: 'image_scale_1.00_1.10_5000|borderLighter',
         thumbnailLabel: {
           display: false,
           position: 'overImageOnBottom'
-        }
-        
+        },
+        viewerToolbar: {
+          standard: "minimizeButton , previousButton , pageCounter , nextButton , fullscreenButton",
+          minimized: "minimizeButton , previousButton , pageCounter , nextButton , fullscreenButton"},
+        viewerTools:{
+          topLeft: 'pageCounter, playPauseButton, downloadButton',
+          topRight: "zoomButton, fullscreenButton, closeButton"
+
+          }
       });
     });
-  </script>
-  
-
+  </script> 
 
   <footer class="u-align-center u-clearfix u-footer u-grey-75 u-footer" id="sec-354b">
     <div class="u-clearfix u-sheet u-sheet-1">

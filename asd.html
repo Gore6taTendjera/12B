@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>Typing effect</title>
+  <style>
+    body {
+      background: black;
+      font-family: 'Trebuchet MS', sans-serif;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .typed-out {
+        font-size: 3rem;
+        align-self: center;
+      border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+      letter-spacing: .15em; /* Adjust as needed */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p id="demo" class="typed-out"></p>
+  </div>
+
+  <script>
+    var i = 0; // index of the current character
+    var txt = 'Здравейте госпожо Цветкова! \nЧакаме ви на портала!'; // The text to be typed
+    var speed = 100; // The speed/duration of the effect in milliseconds
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i); // append one character at a time
+        i++;
+        setTimeout(typeWriter, speed); // call the function again after a delay
+      } else {
+        document.getElementById("demo").innerHTML = ""; // clear the text
+        i = 0; // reset the index
+        setTimeout(typeWriter, speed); // start over again
+      }
+    }
+
+    typeWriter(); // start the typing effect
+  </script>
+
+</body>
+</html>
+

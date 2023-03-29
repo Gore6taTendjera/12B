@@ -1,125 +1,0 @@
-<a href="album\8inal1.webp"></a>
-<a href="album\8inal2.webp"></a>
-<a href="album\8inal3.webp"></a>
-<a href="album\8inal4.webp"></a>
-<a href="album\8inal5.webp"></a>
-<a href="album\8inal6.webp"></a>
-<a href="album\8inal7.webp"></a>
-<a href="album\8inal8.webp"></a>
-<a href="album\8inal9.webp"></a>
-<a href="album\8inal10.webp"></a>
-<a href="album\8inal11.webp"></a>
-<a href="album\8inal12.webp"></a>
-<a href="album\8inal13.webp"></a>
-<a href="album\8inal14.webp"></a>
-<a href="album\8inal15.webp"></a>
-<a href="album\8inal16.webp"></a>
-<a href="album\8inal17.webp"></a>
-<a href="album\8inal18.webp"></a>
-<a href="album\8inal19.webp"></a>
-<a href="album\8inal20.webp"></a>
-<a href="album\8inal21.webp"></a>
-<a href="album\8inal22.webp"></a>
-<a href="album\8inal23.webp"></a>
-<a href="album\8inal24.webp"></a>
-<a href="album\8inal25.webp"></a>
-<a href="album\8inal26.webp"></a>
-<a href="album\8inal27.webp"></a>
-<a href="album\8inal28.webp"></a>
-<a href="album\8inal29.webp"></a>
-<a href="album\8inal30.webp"></a>
-<a href="album\8inal31.webp"></a>
-<a href="album\8inal32.webp"></a>
-<a href="album\8inal33.webp"></a>
-<a href="album\8inal34.webp"></a>
-<a href="album\8inal35.webp"></a>
-<a href="album\8inal36.webp"></a>
-<a href="album\8inal37.webp"></a>
-<a href="album\8inal38.webp"></a>
-<a href="album\8inal39.webp"></a>
-<a href="album\8inal40.webp"></a>
-<a href="album\8inal41.webp"></a>
-<a href="album\8inal42.webp"></a>
-<a href="album\8inal43.webp"></a>
-<a href="album\8inal44.webp"></a>
-<a href="album\8inal45.webp"></a>
-<a href="album\8inal46.webp"></a>
-<a href="album\8inal47.webp"></a>
-<a href="album\8inal48.webp"></a>
-<a href="album\8inal49.webp"></a>
-<a href="album\8inal50.webp"></a>
-<a href="album\8inal51.webp"></a>
-<a href="album\8inal52.webp"></a>
-<a href="album\8inal53.webp"></a>
-<a href="album\8inal54.webp"></a>
-<a href="album\8inal55.webp"></a>
-<a href="album\8inal56.webp"></a>
-<a href="album\8inal57.webp"></a>
-<a href="album\8inal58.webp"></a>
-<a href="album\8inal59.webp"></a>
-<a href="album\8inal60.webp"></a>
-<a href="album\8inal61.webp"></a>
-<a href="album\8inal62.webp"></a>
-<a href="album\8inal63.webp"></a>
-<a href="album\8inal64.webp"></a>
-<a href="album\8inal65.webp"></a>
-<a href="album\8inal66.webp"></a>
-<a href="album\8inal67.webp"></a>
-<a href="album\8inal68.webp"></a>
-<a href="album\8inal69.webp"></a>
-<a href="album\8inal70.webp"></a>
-<a href="album\8inal71.webp"></a>
-<a href="album\8inal72.webp"></a>
-<a href="album\8inal73.webp"></a>
-<a href="album\8inal74.webp"></a>
-<a href="album\8inal75.webp"></a>
-<a href="album\8inal76.webp"></a>
-<a href="album\8inal77.webp"></a>
-<a href="album\8inal78.webp"></a>
-<a href="album\8inal79.webp"></a>
-<a href="album\8inal80.webp"></a>
-<a href="album\8inal81.webp"></a>
-<a href="album\8inal82.webp"></a>
-<a href="album\8inal83.webp"></a>
-<a href="album\8inal84.webp"></a>
-<a href="album\8inal85.webp"></a>
-<a href="album\8inal86.webp"></a>
-<a href="album\8inal87.webp"></a>
-<a href="album\8inal88.webp"></a>
-<a href="album\8inal89.webp"></a>
-<a href="album\8inal90.webp"></a>
-<a href="album\8inal91.webp"></a>
-<a href="album\8inal92.webp"></a>
-<a href="album\8inal93.webp"></a>
-<a href="album\8inal94.webp"></a>
-<a href="album\8inal95.webp"></a>
-<a href="album\8inal96.webp"></a>
-<a href="album\8inal97.webp"></a>
-<a href="album\8inal98.webp"></a>
-<a href="album\8inal99.webp"></a>
-<a href="album\8inal100.webp"></a>
-<a href="album\8inal101.webp"></a>
-<a href="album\8inal102.webp"></a>
-<a href="album\8inal103.webp"></a>
-<a href="album\8inal104.webp"></a>
-<a href="album\8inal105.webp"></a>
-<a href="album\8inal106.webp"></a>
-<a href="album\8inal107.webp"></a>
-<a href="album\8inal108.webp"></a>
-<a href="album\8inal109.webp"></a>
-<a href="album\8inal110.webp"></a>
-<a href="album\8inal111.webp"></a>
-<a href="album\8inal112.webp"></a>
-<a href="album\8inal113.webp"></a>
-<a href="album\8inal114.webp"></a>
-<a href="album\8inal115.webp"></a>
-<a href="album\8inal116.webp"></a>
-<a href="album\8inal117.webp"></a>
-<a href="album\8inal118.webp"></a>
-<a href="album\8inal119.webp"></a>
-<a href="album\8inal120.webp"></a>
-<a href="album\8inal121.webp"></a>
-<a href="album\8inal122.webp"></a>
-<a href="album\8inal123.webp"></a>
-<a href="album\8inal124.webp"></a>
-<a href="album\8inal125.webp"></a>

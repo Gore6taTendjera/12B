@@ -420,47 +420,51 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     }
 
     function checkTime() {
-      const chasNowElem = document.getElementById("chasNow");
-      const chasRemainElem = document.getElementById("chasRemain");
-      const chasNextElem = document.getElementById("chasNext");
-      const currentTime = DateTime.local();
       let nextState = '';
-      let isEventFound = false;
-    
-      for (const { start, end, state } of schedule) 
-      {
-        const startDateTime = DateTime.local().set({ hour: start.split(':')[0], minute: start.split(':')[1] });
-        const endDateTime = DateTime.local().set({ hour: end.split(':')[0], minute: end.split(':')[1] });
-        if (currentTime >= startDateTime && currentTime <= endDateTime) 
-        {
-          const diffTime = endDateTime.diff(currentTime, ["hours", "minutes", "seconds"]);
-          chasNowElem.innerHTML = state;
-          chasRemainElem.innerHTML = diffTime.values.hours === 0 ? `${diffTime.values.minutes} минути` : `${diffTime.values.hours} часа и ${diffTime.values.minutes} минути`;
-          nextState = state;
-          isEventFound = true;
-          break;
+      let currentTime = DateTime.local();
+      //console.log(currentTime.hour);
+      for (let i = 0; i < schedule.length; i++) {
+        let start = DateTime.local().set({ hour: schedule[i].start.split(':')[0], minute: schedule[i].start.split(':')[1] });
+        let end = DateTime.local().set({ hour: schedule[i].end.split(':')[0], minute: schedule[i].end.split(':')[1] });
+        if (currentTime >= start && currentTime <= end) 
+        { 
+          //console.log(schedule[i].state);
+          const diffTime = end.diff(currentTime, ["hours", "minutes", "seconds"]);
+          document.getElementById("chasNow").innerHTML = schedule[i].state;
+          if (diffTime.values.hours == 0) 
+          {
+            document.getElementById("chasRemain").innerHTML = diffTime.values.minutes + ' минути';
+          }
+          else 
+          {
+            document.getElementById("chasRemain").innerHTML = diffTime.values.hours + ' часа и ' + diffTime.values.minutes + ' минути';
+          }
+          nextState = i < schedule.length - 1 ? schedule[i + 1].state : '';
+          document.getElementById("chasNext").innerHTML = nextState;
+          return;
         }
-      }
-      if (!isEventFound) 
-      {
-        if (currentTime.hour <= 13) 
-        {
-          const { state: firstEventState, start: firstEventStart } = schedule[0];
-          const nextState = schedule[2].state;
-          const startTime = DateTime.local().set({ hour: firstEventStart.split(':')[0], minute: firstEventStart.split(':')[1] });
-          const razlika = startTime.diff(currentTime, ["hours", "minutes", "seconds"]);
-          const hoursText = razlika.values.hours === 1 ? 'час' : 'часа';
-          chasNowElem.innerHTML = `${firstEventState} след ${razlika.values.hours} ${hoursText} и ${razlika.values.minutes} минути`;
-          chasRemainElem.innerHTML = `${razlika.values.hours} ${hoursText} и ${razlika.values.minutes} минути`;
-          nextState = schedule[2].state;
-        } 
         else 
         {
-          chasNowElem.innerHTML = 'Училището свърши';
-          chasRemainElem.innerHTML = 'Остана да се наспиш';
+          if (currentTime.hour <= 13) 
+          {
+            let nextState = schedule[2].state;
+            let startTime = DateTime.local().set({ hour: schedule[0].start.split(':')[0], minute: schedule[0].start.split(':')[1] });
+            var razlika = startTime.diff(currentTime, ["hours", "minutes", "seconds"]);
+            document.getElementById("chasNow").innerHTML = schedule[0].state + ' след ' + razlika.values.hours + ' часа и ' + razlika.values.minutes + ' минути';
+            document.getElementById("chasRemain").innerHTML = + razlika.values.hours + ' часа и ' + razlika.values.minutes + ' минути';
+            document.getElementById("chasNext").innerHTML = nextState;
+            if(razlika.values.hours == 1){
+              document.getElementById("chasNow").innerHTML = schedule[0].state + ' след ' + razlika.values.hours + ' час и ' + razlika.values.minutes + ' минути';
+              document.getElementById("chasRemain").innerHTML = + razlika.values.hours + ' час и ' + razlika.values.minutes + ' минути';
+            }
+            return;
+          }
+          document.getElementById("chasNext").innerHTML = "Сладки сънища";
+          document.getElementById("chasNow").innerHTML = "Училището свърши";
+          document.getElementById("chasRemain").innerHTML = "Остана да се наспиш";   
         }
       }
-      chasNextElem.innerHTML = nextState || 'Сладки сънища';
+      console.log('Time not found')
     }
     setInterval(checkTime, 1000);
   </script>

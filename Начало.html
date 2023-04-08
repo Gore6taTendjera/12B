@@ -241,136 +241,6 @@
         <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item"
           src="https://www.youtube.com/embed/m1YUmZRfgqU?playlist=m1YUmZRfgqU&amp;loop=1&amp;mute=1&amp;showinfo=0&amp;controls=0&amp;start=0&amp;autoplay=1"
           data-autoplay="1" frameborder="0" allowfullscreen=""></iframe>
-          <!-- <canvas class="embed-responsive embed-responsive-1" style="background-color: black; " id="canvas">Canvas not supported.</canvas> -->
-          <script>
-
-
-(function () {
-  'use strict';
-  window.addEventListener('load', function () {
-    var canvas = document.getElementById('canvas');
-
-    if (!canvas || !canvas.getContext) {
-      return false;
-    }
-
-    function rand(min, max) {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-  
-    var ctx = canvas.getContext('2d');
-    var X = canvas.width = window.innerWidth;
-    var Y = canvas.height = window.innerHeight;
-    var mouseX = null;
-    var mouseY = null;
-    var shapeNum = 1000;
-    var shapes = [];
-    var style = {
-      black: 'black',
-      white: 'white',
-      red: 'red',
-      lineWidth: 1,
-    };
-
-    window.requestAnimationFrame =
-      window.requestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.msRequestAnimationFrame ||
-      function(cb) {
-        setTimeout(cb, 99);
-      };
-
-    function Shape(ctx, x, y) {
-      this.ctx = ctx;
-      this.init(x, y);
-    }
-    
-    Shape.prototype.init = function(x, y) {
-      this.x = x;
-      this.y = y;
-      this.r = rand(12, 1);
-      this.ga = Math.random() * Math.random() * Math.random() * Math.random();
-      this.v = {
-        x: Math.random(),
-        y: -1
-      };
-      this.l = rand(1, 100);
-      this.sl = this.l;
-    };
-
-    Shape.prototype.updateParams = function() {
-      var ratio = this.l / this.sl;
-      //this.r *= ratio;
-      this.l -= 3;
-      if (this.l < 0) {
-        this.init(X * (Math.random() + Math.random()) / 2, rand(0, Y));
-      }
-    };
-
-    Shape.prototype.updatePosition = function() {
-      this.x += Math.random();
-      this.y += -Math.random();
-    };
-    
-    Shape.prototype.draw = function() {
-      var ctx  = this.ctx;
-      ctx.save();
-      ctx.globalCompositeOperation = 'lighter';
-      ctx.globalAlpha = this.ga;
-      //ctx.fillStyle = 'rgb(123, 252, 100)';
-      ctx.fillStyle = 'gold';
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 9, false);
-      ctx.fill();
-      ctx.restore();
-    };
-
-    Shape.prototype.render = function(i) {
-      this.updatePosition();
-      this.updateParams();
-      this.draw();
-    };
-
-    for (var i = 0; i < shapeNum; i++) {
-      var s = new Shape(ctx, X * (Math.random() + Math.random()) / 2, rand(0, Y));
-      shapes.push(s);
-    }
-
-    function render() {
-      ctx.clearRect(0, 0, X, Y);
-      for (var i = 0; i < shapes.length; i++) {
-        shapes[i].render(i);
-      }
-      requestAnimationFrame(render);
-    }
-
-    render();
-    
-    function onResize() {
-      X = canvas.width = window.innerWidth;
-      Y = canvas.height = window.innerHeight;
-    }
-
-    window.addEventListener('resize', function() {
-      onResize();
-    });
-
-    window.addEventListener('mousemove', function(e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    }, false);
-
-  });
-})();
-
-            
-          </script>
-          <style>
-            canvas#canvas {
-              display: block;
-            }
-          </style>
       </div>
     </div>
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -378,29 +248,22 @@
         Класни ръководители</h1>
       <div class="u-expanded-width u-list u-list-1">
         <div class="u-repeater u-repeater-1">
-          <div id="cvetkova"
-            class="u-align-left-xs u-border-3 u-border-palette-3-base u-container-style u-effect-hover-zoom u-list-item u-repeater-item u-shading u-list-item-1"
-            data-image-width="2000" data-image-height="1333">
+          <div id="cvetkova" class="u-align-left-xs u-border-3 u-border-palette-3-base u-container-style u-effect-hover-zoom u-list-item u-repeater-item u-shading u-list-item-1" data-image-width="2000" data-image-height="1333">
             <div class="u-background-effect u-expanded">
-              <div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="301"
-                data-image-height="239"></div>
+              <div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="301" data-image-height="239"></div>
             </div>
-            <div
-              class="u-container-layout u-similar-container u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xl u-container-layout-1">
+            <div class="u-container-layout u-similar-container u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xl u-container-layout-1">
               <h3 class="u-custom-font u-font-lobster u-text u-text-default u-text-2" style="text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;">инж. Димитрина Цветкова</h3>
               <p class="u-custom-font u-font-merriweather u-text u-text-default u-text-3" style="text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;">"Моят клас е първия, моят клас
                 е най-добрия, моят клас е всичко за мен!</p>
             </div>
           </div>
-          <div id="qneva"
-            class="u-align-left-xs u-border-3 u-border-palette-3-base u-container-style u-effect-hover-zoom u-list-item u-repeater-item u-shading u-list-item-2"
-            data-image-width="2000" data-image-height="1333">
+          <div id="qneva" class="u-align-left-xs u-border-3 u-border-palette-3-base u-container-style u-effect-hover-zoom u-list-item u-repeater-item u-shading u-list-item-2" data-image-width="2000" data-image-height="1333">
             <div class="u-background-effect u-expanded">
               <div class="u-background-effect-image u-expanded u-image u-shading u-image-2" data-image-width="329"
                 data-image-height="373"></div>
             </div>
-            <div
-              class="u-container-layout u-similar-container u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xl u-container-layout-2">
+            <div class="u-container-layout u-similar-container u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xl u-container-layout-2">
               <h3 class="u-custom-font u-font-lobster u-text u-text-default u-text-4" style="text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;">инж. Пенка Янева</h3>
               <p class="u-custom-font u-font-merriweather u-text u-text-default u-text-5" style="text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;">"Имах една задача, връчена ми
                 от горно ниво. Макар и с трудности, Аз се справих!"</p>
@@ -413,12 +276,9 @@
 
   <section class="u-clearfix u-gradient u-section-8" id="sec-c79c"style="opacity: 0; display: none;">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h1 class="u-align-center u-custom-font u-font-lobster u-text u-text-default u-text-1">инж. Димитрина Цветкова
-      </h1>
-      <img class="u-align-center-xs u-image u-image-round u-radius-25 u-image-1" src="images/Screenshot_238.png" alt=""
-        data-image-width="301" data-image-height="239">
-      <p
-        class="u-align-justify u-text u-text-body-alt-color u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-2">
+      <h1 class="u-align-center u-custom-font u-font-lobster u-text u-text-default u-text-1">инж. Димитрина Цветкова</h1>
+      <img class="u-align-center-xs u-image u-image-round u-radius-25 u-image-1" src="images/cvetkova.png" alt="" data-image-width="301" data-image-height="239">
+      <p class="u-align-justify u-text u-text-body-alt-color u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-2">
         Из отсрещната улица се понесе насам монотонен писклив хор от детински гласове. Тия гласове държаха бас на друг
         един по-висок и по-дъртешки глас, който извиваше някаква проточена черковна песен. Странният концерт наближаваше
         и се чуваше все по-силен. Тозчас се подаде ред деца с фенери, хоръгви и дълги беловоскови свещи, превързани с
@@ -427,17 +287,11 @@
       </p>
     </div>
   </section>
-
   <section class="u-align-center u-clearfix u-gradient u-section-9" id="carousel_5425"style="opacity: 0; display: none;">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h1
-        class="u-align-center u-custom-font u-font-lobster u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-1">
-        инж. Пенка Янева</h1>
-      <img class="u-align-center-xs u-image u-image-round u-radius-25 u-image-1"
-        src="images/283936220_10209688800334594_226350993447570932_n.jpg" alt="" data-image-width="329"
-        data-image-height="373">
-      <p
-        class="u-align-justify u-text u-text-body-alt-color u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-2">
+      <h1 class="u-align-center u-custom-font u-font-lobster u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-1">инж. Пенка Янева</h1>
+      <img class="u-align-center-xs u-image u-image-round u-radius-25 u-image-1" src="images/qneva.jpg" alt="" data-image-width="329" data-image-height="373">
+      <p class="u-align-justify u-text u-text-body-alt-color u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-2">
         Из отсрещната улица се понесе насам монотонен писклив хор от детински гласове. Тия гласове държаха бас на друг
         един по-висок и по-дъртешки глас, който извиваше някаква проточена черковна песен. Странният концерт наближаваше
         и се чуваше все по-силен. Тозчас се подаде ред деца с фенери, хоръгви и дълги беловоскови свещи, превързани с
@@ -446,52 +300,187 @@
       </p>
     </div>
   </section>
-  
-
 
   <script>
-    const randomImage1 = document.getElementById("cvetkova");
-    const randomImage2 = document.getElementById("qneva");
+    const Cvetkova = document.getElementById("cvetkova");
+    const Qneva = document.getElementById("qneva");
     const imageContainer = document.getElementById("sec-c79c");
     const imageContainer2 = document.getElementById("carousel_5425");
   
-    randomImage1.addEventListener("click", function () {
+    Cvetkova.addEventListener("click", function() 
+    {
       toggleSection(imageContainer);
     });
-  
-    randomImage2.addEventListener("click", function () {
+    Qneva.addEventListener("click", function() 
+    {
       toggleSection(imageContainer2);
     });
   
-    function toggleSection(container) {
-      if (container.style.display === "none") {
-        container.style.display = "block"; /* show the section */
-        container.style.opacity = "0"; /* set the initial opacity to 0 */
-        container.style.transition = "opacity 0.5s ease-in-out"; /* add a transition effect */
+    function toggleSection(container) 
+    {
+      if (container.style.display === "none") 
+      {
+        container.style.display = "block";
+        container.style.opacity = "0"; 
+        container.style.transition = "opacity 0.5s ease-in-out"; 
         setTimeout(() => {
-          container.style.opacity = "1"; /* gradually change the opacity to 1 */
-        }, 50); /* wait a short time before changing the opacity */
-      } else {
-        container.style.opacity = "0"; /* gradually change the opacity to 0 */
+          container.style.opacity = "1"; 
+        }, 50); 
+      }
+      else 
+      {
+        container.style.opacity = "0"; 
         setTimeout(() => {
-          container.style.display = "none"; /* hide the section */
-        }, 500); /* wait for the transition to complete before hiding the section */
+          container.style.display = "none"; 
+        }, 500); 
       }
     }
   </script>
   
 
+  <script>
+    (function()
+    {
+      'use strict';
+      window.addEventListener('load', function () {
+        var canvas = document.getElementById('canvas');
+        if (!canvas || !canvas.getContext) 
+        {
+          return false;
+        }
+        
+        function rand(min, max) 
+        {
+          return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+      
+        var ctx = canvas.getContext('2d');
+        var X = canvas.width = window.innerWidth;
+        var Y = canvas.height = window.innerHeight;
+        var mouseX = null;
+        var mouseY = null;
+        var shapeNum = 1000;
+        var shapes = [];
+        var style = {
+          black: 'black',
+          white: 'white',
+          red: 'red',
+          lineWidth: 1,
+        };
+    
+        window.requestAnimationFrame =
+          window.requestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          function(cb) {
+            setTimeout(cb, 99);
+          };
+    
+        function Shape(ctx, x, y) 
+        {
+          this.ctx = ctx;
+          this.init(x, y);
+        }
+        
+        Shape.prototype.init = function(x, y) 
+        {
+          this.x = x;
+          this.y = y;
+          this.r = rand(12, 1);
+          this.ga = Math.random() * Math.random() * Math.random() * Math.random();
+          this.v = {
+            x: Math.random(),
+            y: -1
+          };
+          this.l = rand(1, 100);
+          this.sl = this.l;
+        };
+    
+        Shape.prototype.updateParams = function() 
+        {
+          var ratio = this.l / this.sl;
+          this.l -= 3;
+          if (this.l < 0) {
+            this.init(X * (Math.random() + Math.random()) / 2, rand(0, Y));
+          }
+        };
+    
+        Shape.prototype.updatePosition = function() 
+        {
+          this.x += Math.random();
+          this.y += -Math.random();
+        };
+        
+        Shape.prototype.draw = function() 
+        {
+          var ctx  = this.ctx;
+          ctx.save();
+          ctx.globalCompositeOperation = 'lighter';
+          ctx.globalAlpha = this.ga;
+          ctx.fillStyle = 'gold';
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.r, 0, Math.PI * 9, false);
+          ctx.fill();
+          ctx.restore();
+        };
+    
+        Shape.prototype.render = function(i) 
+        {
+          this.updatePosition();
+          this.updateParams();
+          this.draw();
+        };
+    
+        for (var i = 0; i < shapeNum; i++) 
+        {
+          var s = new Shape(ctx, X * (Math.random() + Math.random()) / 2, rand(0, Y));
+          shapes.push(s);
+        }
+    
+        function render() 
+        {
+          ctx.clearRect(0, 0, X, Y);
+          for (var i = 0; i < shapes.length; i++) 
+          {
+            shapes[i].render(i);
+          }
+          requestAnimationFrame(render);
+        }
+        render();
 
+        function onResize() 
+        {
+          X = canvas.width = window.innerWidth;
+          Y = canvas.height = window.innerHeight;
+        }
 
+        window.addEventListener('resize', function() 
+        {
+          onResize();
+        });
 
+        window.addEventListener('mousemove', function(e) 
+        {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        }, false);
+    
+      });
+    })();
+    </script>
+    <style>
+      canvas#canvas{
+        display: block;
+      }
+    </style>
 
   <script src="cosmic.js"></script>
   <section class="skrollable u-align-center u-border-6 u-border-palette-3-base u-clearfix u-image u-section-5" id="sec-47be" data-image-width="3840" data-image-height="2160">
     <div class="u-clearfix u-sheet u-sheet-1">
       <div>
         <canvas id="motion" class="u-align-center u-container-style u-list-item u-repeater-item" 
-        style="z-index: -1; left: 0; top: 0; width: 100%; height: 100%; position: absolute;">
-        </canvas>
+        style="z-index: -1; left: 0; top: 0; width: 100%; height: 100%; position: absolute;"></canvas>
       </div>
       <h2 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-default u-text-1">Абитуриентски бал</h2>
       <h3 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-2"><span class="u-icon"></span>&nbsp;25.05.2023</h3>
@@ -533,15 +522,12 @@
   </section>
 
   <script>
-    // Set the date we're counting down to
     var countDownDate = new Date("May 25, 2023 00:00:00").getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function () {
-
+    var x = setInterval(function() 
+    {
       var now = new Date().getTime();
       var distance = countDownDate - now;
-
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -551,25 +537,18 @@
       document.getElementById("hours").innerHTML = hours;
       document.getElementById("minutes").innerHTML = minutes;
       document.getElementById("seconds").innerHTML = seconds;
-
     }, 1000);
   </script>
-
 
   <footer class="u-align-center u-clearfix u-footer u-grey-75 u-footer" id="sec-354b">
     <div class="u-clearfix u-sheet u-sheet-1">
       <p class="u-align-center u-small-text u-text u-text-variant u-text-1">Правено от&nbsp;<a
-          href="https://emojipedia.org/red-heart/"
-          class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
-          rel="nofollow">❤️</a>
+          href="https://emojipedia.org/red-heart/" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" rel="nofollow">❤️</a>
       </p>
       <p class="u-align-center u-small-text u-text u-text-variant u-text-2">
-        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-base u-btn-2"
-          href="ЗаМен.html">За мен 👤</a>
+        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-base u-btn-2" href="ЗаМен.html">За мен 👤</a>
       </p>
     </div>
   </footer>
-
 </body>
-
 </html>

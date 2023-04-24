@@ -87,6 +87,10 @@
 }
 
 @media (max-width: 767px) {
+  .sozeee {
+    min-height: 500px !important;
+  }
+
   .u-section-1 .u-text-1 {
     font-size: 3.75rem;
   }
@@ -106,7 +110,7 @@
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 2600px;
+    min-height: 2250px;
   }
 
   .u-section-1 .u-image-1 {
@@ -124,7 +128,7 @@
   .u-section-1 .u-text-3 {
     min-height: auto;
     font-size: 10px;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
   }
 
   .u-section-1 .u-text-4 {

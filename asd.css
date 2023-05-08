@@ -6032,6 +6032,13 @@ section.u-image:not(.u-hover-box),
     width: var(--theme-sheet-width-xl) !important;
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .u-xl-mode .u-sheet {
+    width: var(--theme-sheet-width-asd) !important;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .u-sheet {
     width: var(--theme-sheet-width-lg) !important;
@@ -38544,6 +38551,7 @@ a.u-link.u-text-hover-grey-90:hover {
         
         
         --theme-sheet-width-xl: 1140px;
+        --theme-sheet-width-asd: 1010px;
         --theme-sheet-width-lg: 940px;
         --theme-sheet-width-md: 720px;
         --theme-sheet-width-sm: 540px;

@@ -453,7 +453,7 @@
 }
 
 .u-section-4 .u-text-4 {
-  font-size: 1.25rem;
+  font-size: 25px;
   margin: 17px 0 0 530px;
 }
 
@@ -651,12 +651,13 @@
 }
 
 .u-section-5 .u-text-4 {
-  font-size: 1.25rem;
+  font-size: 25px;
   margin: 17px 530px 0 0;
 }
 
 .u-section-5 .u-text-5 {
-  margin: 104px 0 0;
+  margin: 64px 0 0;
+  font-size: 40px !important;
 }
 
 .u-section-5 .u-group-1 {
@@ -1230,5 +1231,12 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fixxer{
+    margin-left: -100px !important;
+    margin-right: -100px !important;
   }
 }

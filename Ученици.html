@@ -385,7 +385,7 @@
               </div>
               <div style="color: white;" class="flip-card-back u-border-1 u-border-custom-color-2 u-container-style u-image u-image-round u-list-item u-radius-15 u-repeater-item u-shading">
                 <div class="u-container-layout u-similar-container u-container-layout-3">
-                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"Гимназията беше като затвор. Бях хванат в капана на система, която не работеше за мен, но нямах друг избор, освен да излежа присъдата си."</p>
+                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"НАМИСЛИ СИ ИЗРЕЧЕНИЕ, КОЕТО ОПИСВА ПРЕСТОЯ ТИ В ПГБТ ЗА 5-ТЕ ГОДИНИ! <br></br>ТО ЩЕ СЕ ПОКАЗВА ТУК"</p>
                   <a class="facebook-icon" target="_blank" href="https://www.facebook.com/zdrbebcekp" onclick="event.preventDefault(); openFacebook('https://www.facebook.com/zdrbebcekp');">
                     <i class="fa fa-facebook-square" id="facebook"></i> 
                   </a>
@@ -476,7 +476,7 @@
               </div>
               <div style="color: white;" class="flip-card-back u-border-1 u-border-custom-color-2 u-container-style u-image u-image-round u-list-item u-radius-15 u-repeater-item u-shading">
                 <div style="margin: 0em;" class="u-container-layout u-similar-container u-container-layout-3">
-                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"Тези 5 години бяха като цирк. Имаше клоуни, животни и много трикове. Беше забавно, но и много кошмарно."</p>
+                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"НАМИСЛИ СИ ИЗРЕЧЕНИЕ, КОЕТО ОПИСВА ПРЕСТОЯ ТИ В ПГБТ ЗА 5-ТЕ ГОДИНИ! <br></br>ТО ЩЕ СЕ ПОКАЗВА ТУК"</p>
                   <a class="facebook-icon" target="_blank" href="https://www.facebook.com/MihailNikolovBG" onclick="event.preventDefault(); openFacebook('https://www.facebook.com/MihailNikolovBG');">
                     <i class="fa fa-facebook-square" id="facebook"></i> 
                   </a>
@@ -614,7 +614,7 @@
               </div>
               <div style="color: white;" class="flip-card-back u-border-1 u-border-custom-color-2 u-container-style u-image u-image-round u-list-item u-radius-15 u-repeater-item u-shading">
                 <div class="u-container-layout u-similar-container u-container-layout-3">
-                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"В гимназията ме научиха, че в ада има специално място за ... учители."</p>
+                  <p style="line-height: 1.4; font-family: Caveat; font-size: 35px; font-weight: bold;" class="u-text-2 u-text-back">"НАМИСЛИ СИ ИЗРЕЧЕНИЕ, КОЕТО ОПИСВА ПРЕСТОЯ ТИ В ПГБТ ЗА 5-ТЕ ГОДИНИ! <br></br>ТО ЩЕ СЕ ПОКАЗВА ТУК"</p>
                   <a class="facebook-icon" target="_blank" href="https://www.facebook.com/stefan.ivanov.1023611" onclick="event.preventDefault(); openFacebook('https://www.facebook.com/stefan.ivanov.1023611');">
                     <i class="fa fa-facebook-square" id="facebook"></i> 
                   </a>
@@ -729,30 +729,36 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-      $(".flip-card").click(function(event){
-        if (event.target.tagName === 'BUTTON' || event.target.parentElement.tagName === 'A') {
+      $(".flip-card").click(function(event)
+      {
+        if (event.target.tagName === 'BUTTON' || event.target.parentElement.tagName === 'A')
+        {
           return;
         }
         $(this).toggleClass("active");
       });
 
-      $(".myButton").mousedown(function() {
+      $(".myButton").mousedown(function() 
+      {
         var x = document.querySelector(".myAudio");
         x.currentTime = 0;
         x.play();
       });
       
-      $(".myButton").mouseup(function() {
+      $(".myButton").mouseup(function() 
+      {
         var x = document.querySelector(".myAudio");
         x.pause();
       });
       
-      $(".facebook-icon, .instagram-icon").mousedown(function(event) {
+      $(".facebook-icon, .instagram-icon").mousedown(function(event) 
+      {
         event.stopPropagation();
       });
     });
 
-    function playAudio(event) {
+    function playAudio(event) 
+    {
       event.stopPropagation();
       var x = document.querySelector(".myAudio");
       x.currentTime = 0;
@@ -761,44 +767,41 @@
 </script>
 
 <script>
-  function openInstagram(igUrl) {
+  function openInstagram(igUrl) 
+  {
     const appLink = `instagram://user?username=${igUrl.substring(igUrl.lastIndexOf('/') + 1)}`;
     const fallbackLink = igUrl;
-  
     const isIos = /iP(hone|od|ad)/.test(navigator.userAgent);
     const isAndroid = /Android/.test(navigator.userAgent);
   
-    if (isIos || isAndroid) {
-      // Try to open the app
+    if (isIos || isAndroid) 
+    {
       window.location.href = appLink;
-  
-      // If the app is not installed or cannot be opened, open the fallback link
       setTimeout(() => { window.location.href = fallbackLink; }, 500);
-    } else {
-      // Open the fallback link in a new tab
+    } 
+    else 
+    {
       window.open(fallbackLink, '_blank');
     }
   }
-  </script>
+</script>
   
-
 <script>
-function openFacebook(url) {
-  const appLink = `fb://profile?id=${url.substring(url.lastIndexOf('/') + 1)}`;
-  const fallbackLink = url;
+  function openFacebook(url) 
+  {
+    const appLink = `fb://profile?id=${url.substring(url.lastIndexOf('/') + 1)}`;
+    const fallbackLink = url;
+    const isIos = /iP(hone|od|ad)/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
 
-  const isIos = /iP(hone|od|ad)/.test(navigator.userAgent);
-  const isAndroid = /Android/.test(navigator.userAgent);
-
-  if (isIos || isAndroid) {
-    // Try to open the app
-    window.location.href = appLink;
-
-    // If the app is not installed or cannot be opened, open the fallback link
-    setTimeout(() => { window.location.href = fallbackLink; }, 500);
-  } else {
-    // Open the fallback link in a new tab
-    window.open(fallbackLink, '_blank');
+    if (isIos || isAndroid) 
+    {
+      window.location.href = appLink;
+      setTimeout(() => { window.location.href = fallbackLink; }, 500);
+    } 
+    else 
+    {
+      window.open(fallbackLink, '_blank');
+    }
   }
-}
 </script>

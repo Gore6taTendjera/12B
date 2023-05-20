@@ -1,40 +1,40 @@
-::-webkit-scrollbar {
-	display: none;
+/* Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  ::-webkit-scrollbar {
+    /* width */
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* Track */
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* Handle */
+    background: rgb(100,100,100);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    /* Handle on hover */
+    background: rgb(200,200,200);
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    /* not handle on */
+    background: rgb(1, 1, 1);
+  }
 }
 
-.container {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+/* Firefox */
+@supports (-moz-appearance: none) {
+  html {
+    scrollbar-color: rgb(100,100,100) black;
+    scrollbar-width: thin;
+  }
 }
-.container::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
-}
-
-
-
-.hide-scrollbar
-{
-    overflow: auto;
-    -ms-overflow-style: none; /* IE 11 */
-    scrollbar-width: none; /* Firefox 64 */
-}
-
-
-          @-moz-document url-prefix() { /* Disable scrollbar Firefox */
-            html{
-              scrollbar-width: none;
-            }
-          }
-          body {
-            margin: 0; /* remove default margin */
-            scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
-            -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
-            overflow-y: scroll;
-          }
-          body::-webkit-scrollbar {
-            width: 0px;
-            background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
-          }
 
 
 

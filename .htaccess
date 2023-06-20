@@ -2,3 +2,12 @@ AddType application/octet-stream .pdf
 AddType application/octet-stream .pptx
 AddType application/octet-stream .docx
 ErrorDocument 404 /Начало.html
+
+Access-Control-Allow-Origin: https://youtube.com
+Access-Control-Allow-Origin: https://img.youtube.com
+Header set Access-Control-Allow-Origin 'https://youtube.com'
+Header set Access-Control-Allow-Origin 'https://img.youtube.com'
+add_header Header set Access-Control-Allow-Origin 'https://youtube.com' always;
+add_header Header set Access-Control-Allow-Origin 'https://img.youtube.com' always;
+
+

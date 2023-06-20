@@ -7,12 +7,10 @@ def reduce_resolution(image_path):
     new_width = width // 2
     new_height = height // 2
     resized_image = image.resize((new_width, new_height))
-
-    # Create a new folder to store the resized images if it doesn't exist
+    
     output_folder = "resized"
     os.makedirs(output_folder, exist_ok=True)
 
-    # Construct the output file path
     file_name = os.path.basename(image_path)
     output_path = os.path.join(output_folder, file_name)
 
@@ -26,5 +24,4 @@ def process_webp_files():
             reduce_resolution(file_path)
             print(f"Reduced resolution of {file_name}")
 
-# Example usage:
 process_webp_files()

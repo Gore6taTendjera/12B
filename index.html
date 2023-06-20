@@ -319,140 +319,57 @@
     <div class="u-clearfix u-sheet u-sheet-1" style="width: 2000 !important; max-width: auto !important;">
       <h2 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-default u-text-1">Абитуриентски бал</h2>
       <h3 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-2"><span class="u-icon"></span>&nbsp;25.05.2023</h3>
-      <H1 class="vibrate-1">НА 20.06.2023 Г. КЪМ 18:00 Ч. ЩЕ СЕ ПОЯВИ БУТОН ЗА СВАЛЯНЕ НА ВСИЧКИ СНИМКИ</H1>
-      <H1 class="text-pop-up-top" style="margin-top: 100px;">ТОЧНО ТУК!</H1>
 
-      <button style="display: none;">
-        <a href="your-file-download-link" class="download-link">
-          <img src="https://static.thenounproject.com/png/3628340-200.png" width="30%" height="30%" alt="Download Icon">
-          <span class="button-text">Download</span>
+      <button class="download-button">
+        <a href="https://mega.nz/file/bpsgyY5I#ITiF3I-ZMtoBt8FGrw6ZZiYk3ut9O2Vc_OtIxcXOew8" class="download-link">
+          <img src="https://static.thenounproject.com/png/3628340-200.png" class="download-icon">
+          <span class="button-text">ИЗТЕГЛИ ВСИЧКИ СНИМКИ</span>
         </a>
       </button>
       
       <style>
-        .button-link {
+        .download-button {
+          margin: 25px;
           display: inline-block;
           padding: 10px 20px;
-          background-color: #f0f0f0;
+          background: white;
           border: none;
+          border-radius: 5px;
           text-decoration: none;
           color: #000;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
         }
+      
+        .download-button:hover {
+          background-color: #ffd700;
+          color: darkred;
+        }
+      
         .download-link {
           display: inline-flex;
-          align-items: center; /* Vertically center the contents */
-          padding-left: 20px; /* Adjust the padding as needed */
+          align-items: center;
+          padding-left: 20px;
           text-decoration: none;
           color: #000;
         }
-        .download-link img {
+      
+        .download-icon {
           position: relative;
-          left: -20px; /* Adjust the left position to align the image with the text */
-          margin-right: 5px; /* Add some space between the image and text */
+          left: -20px;
+          margin-right: 5px;
+          width: 30px;
+          height: 30px;
         }
+      
         .button-text {
           display: inline-block;
-          vertical-align: middle; /* Center the text vertically */
-          font-size: 30px;
+          vertical-align: middle;
+          font-size: 18px;
+          color: black;
         }
-
-        .text-pop-up-top {
-          -webkit-animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
-                  animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
-        }
-
-        @-webkit-keyframes text-pop-up-top {
-          0% {
-            -webkit-transform: translateY(0);
-                    transform: translateY(0);
-            -webkit-transform-origin: 50% 50%;
-                    transform-origin: 50% 50%;
-            text-shadow: none;
-          }
-          100% {
-            -webkit-transform: translateY(-50px);
-                    transform: translateY(-50px);
-            -webkit-transform-origin: 50% 50%;
-                    transform-origin: 50% 50%;
-            text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-          }
-        }
-        @keyframes text-pop-up-top {
-          0% {
-            -webkit-transform: translateY(0);
-                    transform: translateY(0);
-            -webkit-transform-origin: 50% 50%;
-                    transform-origin: 50% 50%;
-            text-shadow: none;
-          }
-          100% {
-            -webkit-transform: translateY(-50px);
-                    transform: translateY(-50px);
-            -webkit-transform-origin: 50% 50%;
-                    transform-origin: 50% 50%;
-            text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-          }
-        }
-
-        .vibrate-1 {
-          -webkit-animation: vibrate-1 3s linear infinite both;
-                  animation: vibrate-1 3s linear infinite both;
-        }
-
-          @-webkit-keyframes vibrate-1 {
-            0% {
-              -webkit-transform: translate(0);
-                      transform: translate(0);
-            }
-            20% {
-              -webkit-transform: translate(-2px, 2px);
-                      transform: translate(-2px, 2px);
-            }
-            40% {
-              -webkit-transform: translate(-2px, -2px);
-                      transform: translate(-2px, -2px);
-            }
-            60% {
-              -webkit-transform: translate(2px, 2px);
-                      transform: translate(2px, 2px);
-            }
-            80% {
-              -webkit-transform: translate(2px, -2px);
-                      transform: translate(2px, -2px);
-            }
-            100% {
-              -webkit-transform: translate(0);
-                      transform: translate(0);
-            }
-          }
-          @keyframes vibrate-1 {
-            0% {
-              -webkit-transform: translate(0);
-                      transform: translate(0);
-            }
-            20% {
-              -webkit-transform: translate(-2px, 2px);
-                      transform: translate(-2px, 2px);
-            }
-            40% {
-              -webkit-transform: translate(-2px, -2px);
-                      transform: translate(-2px, -2px);
-            }
-            60% {
-              -webkit-transform: translate(2px, 2px);
-                      transform: translate(2px, 2px);
-            }
-            80% {
-              -webkit-transform: translate(2px, -2px);
-                      transform: translate(2px, -2px);
-            }
-            100% {
-              -webkit-transform: translate(0);
-                      transform: translate(0);
-            }
-          }
-
       </style>
+      
 
       <!-- <h3 class="u-custom-font u-font-lobster u-text u-text-custom-color-1 u-text-3">Остават: </h3>
       <div class="u-expanded-width u-list u-list-1">
@@ -490,12 +407,13 @@
       </div> -->
 
       <div class="image-grid">
-        <a href="abiturientska/1.webp" data-fancybox="gallery" data-src="abiturientska/thumb/1.webp"> <img data-src="abiturientska/thumb/1.webp" /></a> 
-        <a href="abiturientska/121.webp" data-fancybox="gallery" data-src="abiturientska/thumb/121.webp"> <img data-src="abiturientska/thumb/121.webp" /></a> 
-        <a href="abiturientska/122.webp" data-fancybox="gallery" data-src="abiturientska/thumb/122.webp"> <img data-src="abiturientska/thumb/122.webp" /></a> 
-        <a href="abiturientska/123.webp" data-fancybox="gallery" data-src="abiturientska/thumb/123.webp"> <img data-src="abiturientska/thumb/123.webp" /></a> 
-        <a href="abiturientska/124.webp" data-fancybox="gallery" data-src="abiturientska/thumb/124.webp"> <img data-src="abiturientska/thumb/124.webp" /></a>   
-        <a href="abiturientska/125.webp" data-fancybox="gallery" data-src="abiturientska/thumb/125.webp"> <img data-src="abiturientska/thumb/125.webp" /></a> 
+    
+        <a href="abiturientska/1.webp" data-fancybox="gallery" data-src="abiturientska/thumb/1.webp"> <img data-src="abiturientska/thumb/1.webp" /></a>
+        <a href="abiturientska/2.webp" data-fancybox="gallery" data-src="abiturientska/thumb/2.webp"> <img data-src="abiturientska/thumb/2.webp" /></a>
+        <a href="abiturientska/3.webp" data-fancybox="gallery" data-src="abiturientska/thumb/3.webp"> <img data-src="abiturientska/thumb/3.webp" /></a>
+        <a href="abiturientska/4.webp" data-fancybox="gallery" data-src="abiturientska/thumb/4.webp"> <img data-src="abiturientska/thumb/4.webp" /></a>
+        <a href="abiturientska/5.webp" data-fancybox="gallery" data-src="abiturientska/thumb/5.webp"> <img data-src="abiturientska/thumb/5.webp" /></a>
+        <a href="abiturientska/6.webp" data-fancybox="gallery" data-src="abiturientska/thumb/6.webp"> <img data-src="abiturientska/thumb/6.webp" /></a>
 
         <a href="https://youtu.be/m8CPwDHAfsw" data-fancybox="gallery" data-width="1550" data-height="1000" data-src="https://images-ext-2.discordapp.net/external/Wug_6b5vk9WTbzJoSePG75lvG0flVRaax_sWjzbLeY0/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYUiBlKC8wDw%3D%3D%26rs%3DAOn4CLAmREsWly67zejKTW_xRjgEKmnesA/https/i9.ytimg.com/vi/m8CPwDHAfsw/mqdefault.jpg?width=383&height=215">
           <img data-src="https://images-ext-2.discordapp.net/external/Wug_6b5vk9WTbzJoSePG75lvG0flVRaax_sWjzbLeY0/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYUiBlKC8wDw%3D%3D%26rs%3DAOn4CLAmREsWly67zejKTW_xRjgEKmnesA/https/i9.ytimg.com/vi/m8CPwDHAfsw/mqdefault.jpg?width=383&height=215"/>
@@ -507,76 +425,44 @@
           <img data-src="https://images-ext-1.discordapp.net/external/rni4rCxnaxYrhB2m3XkXJJ2KnD9hGPbaaHgy6EQSH_8/%3Fsqp%3DCIzOxaQG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgOig8MA8%3D%26rs%3DAOn4CLDfLf8FBKvKujAoAjW9WkKWESlflQ/https/i9.ytimg.com/vi/ksjMqEdw0Os/mqdefault.jpg?width=383&height=215">
         </a>
 
-        <a href="abiturientska/3.webp" data-fancybox="gallery" data-src="abiturientska/thumb/3.webp"> <img data-src="abiturientska/thumb/3.webp" /></a> 
-        <a href="abiturientska/4.webp" data-fancybox="gallery" data-src="abiturientska/thumb/4.webp"> <img data-src="abiturientska/thumb/4.webp" /></a> 
-        <a href="abiturientska/5.webp" data-fancybox="gallery" data-src="abiturientska/thumb/5.webp"> <img data-src="abiturientska/thumb/5.webp" /></a> 
-        <a href="abiturientska/6.webp" data-fancybox="gallery" data-src="abiturientska/thumb/6.webp"> <img data-src="abiturientska/thumb/6.webp" /></a> 
-        <a href="abiturientska/7.webp" data-fancybox="gallery" data-src="abiturientska/thumb/7.webp"> <img data-src="abiturientska/thumb/7.webp" /></a>   
+        <a href="abiturientska/7.webp" data-fancybox="gallery" data-src="abiturientska/thumb/7.webp"> <img data-src="abiturientska/thumb/7.webp" /></a>
         <a href="abiturientska/8.webp" data-fancybox="gallery" data-src="abiturientska/thumb/8.webp"> <img data-src="abiturientska/thumb/8.webp" /></a>
-        <a href="abiturientska/9.webp" data-fancybox="gallery" data-src="abiturientska/thumb/9.webp"> <img data-src="abiturientska/thumb/9.webp" /></a> 
-        <a href="abiturientska/10.webp" data-fancybox="gallery" data-src="abiturientska/thumb/10.webp"> <img data-src="abiturientska/thumb/10.webp" /></a> 
-        <a href="abiturientska/11.webp" data-fancybox="gallery" data-src="abiturientska/thumb/11.webp"> <img data-src="abiturientska/thumb/11.webp" /></a> 
-        <a href="abiturientska/12.webp" data-fancybox="gallery" data-src="abiturientska/thumb/12.webp"> <img data-src="abiturientska/thumb/12.webp" /></a>   
-        <a href="abiturientska/13.webp" data-fancybox="gallery" data-src="abiturientska/thumb/13.webp"> <img data-src="abiturientska/thumb/13.webp" /></a>  
-        <a href="abiturientska/14.webp" data-fancybox="gallery" data-src="abiturientska/thumb/14.webp"> <img data-src="abiturientska/thumb/14.webp" /></a> 
-        <a href="abiturientska/15.webp" data-fancybox="gallery" data-src="abiturientska/thumb/15.webp"> <img data-src="abiturientska/thumb/15.webp" /></a> 
-        <a href="abiturientska/16.webp" data-fancybox="gallery" data-src="abiturientska/thumb/16.webp"> <img data-src="abiturientska/thumb/16.webp" /></a> 
-        <a href="abiturientska/17.webp" data-fancybox="gallery" data-src="abiturientska/thumb/17.webp"> <img data-src="abiturientska/thumb/17.webp" /></a>   
-        <a href="abiturientska/18.webp" data-fancybox="gallery" data-src="abiturientska/thumb/18.webp"> <img data-src="abiturientska/thumb/18.webp" /></a> 
-        <a href="abiturientska/19.webp" data-fancybox="gallery" data-src="abiturientska/thumb/19.webp"> <img data-src="abiturientska/thumb/19.webp" /></a> 
-        <a href="abiturientska/20.webp" data-fancybox="gallery" data-src="abiturientska/thumb/20.webp"> <img data-src="abiturientska/thumb/20.webp" /></a> 
-        <a href="abiturientska/21.webp" data-fancybox="gallery" data-src="abiturientska/thumb/21.webp"> <img data-src="abiturientska/thumb/21.webp" /></a> 
-        <a href="abiturientska/22.webp" data-fancybox="gallery" data-src="abiturientska/thumb/22.webp"> <img data-src="abiturientska/thumb/22.webp" /></a>   
-        <a href="abiturientska/23.webp" data-fancybox="gallery" data-src="abiturientska/thumb/23.webp"> <img data-src="abiturientska/thumb/23.webp" /></a> 
-        <a href="abiturientska/24.webp" data-fancybox="gallery" data-src="abiturientska/thumb/24.webp"> <img data-src="abiturientska/thumb/24.webp" /></a> 
-        <a href="abiturientska/25.webp" data-fancybox="gallery" data-src="abiturientska/thumb/25.webp"> <img data-src="abiturientska/thumb/25.webp" /></a> 
-        <a href="abiturientska/26.webp" data-fancybox="gallery" data-src="abiturientska/thumb/26.webp"> <img data-src="abiturientska/thumb/26.webp" /></a> 
-        <a href="abiturientska/27.webp" data-fancybox="gallery" data-src="abiturientska/thumb/27.webp"> <img data-src="abiturientska/thumb/27.webp" /></a>   
-        <a href="abiturientska/28.webp" data-fancybox="gallery" data-src="abiturientska/thumb/28.webp"> <img data-src="abiturientska/thumb/28.webp" /></a> 
-        <a href="abiturientska/29.webp" data-fancybox="gallery" data-src="abiturientska/thumb/29.webp"> <img data-src="abiturientska/thumb/29.webp" /></a> 
-        <a href="abiturientska/30.webp" data-fancybox="gallery" data-src="abiturientska/thumb/30.webp"> <img data-src="abiturientska/thumb/30.webp" /></a> 
-        <a href="abiturientska/31.webp" data-fancybox="gallery" data-src="abiturientska/thumb/31.webp"> <img data-src="abiturientska/thumb/31.webp" /></a> 
-        <a href="abiturientska/32.webp" data-fancybox="gallery" data-src="abiturientska/thumb/32.webp"> <img data-src="abiturientska/thumb/32.webp" /></a>   
-        <a href="abiturientska/33.webp" data-fancybox="gallery" data-src="abiturientska/thumb/33.webp"> <img data-src="abiturientska/thumb/33.webp" /></a> 
-        <a href="abiturientska/34.webp" data-fancybox="gallery" data-src="abiturientska/thumb/34.webp"> <img data-src="abiturientska/thumb/34.webp" /></a> 
-        <a href="abiturientska/35.webp" data-fancybox="gallery" data-src="abiturientska/thumb/35.webp"> <img data-src="abiturientska/thumb/35.webp" /></a> 
-        <a href="abiturientska/36.webp" data-fancybox="gallery" data-src="abiturientska/thumb/36.webp"> <img data-src="abiturientska/thumb/36.webp" /></a> 
-        <a href="abiturientska/37.webp" data-fancybox="gallery" data-src="abiturientska/thumb/37.webp"> <img data-src="abiturientska/thumb/37.webp" /></a>   
-        <a href="abiturientska/38.webp" data-fancybox="gallery" data-src="abiturientska/thumb/38.webp"> <img data-src="abiturientska/thumb/38.webp" /></a> 
-        <a href="abiturientska/39.webp" data-fancybox="gallery" data-src="abiturientska/thumb/39.webp"> <img data-src="abiturientska/thumb/39.webp" /></a> 
-        <a href="abiturientska/40.webp" data-fancybox="gallery" data-src="abiturientska/thumb/40.webp"> <img data-src="abiturientska/thumb/40.webp" /></a> 
-        <a href="abiturientska/41.webp" data-fancybox="gallery" data-src="abiturientska/thumb/41.webp"> <img data-src="abiturientska/thumb/41.webp" /></a> 
-        <a href="abiturientska/42.webp" data-fancybox="gallery" data-src="abiturientska/thumb/42.webp"> <img data-src="abiturientska/thumb/42.webp" /></a>   
-        <a href="abiturientska/43.webp" data-fancybox="gallery" data-src="abiturientska/thumb/43.webp"> <img data-src="abiturientska/thumb/43.webp" /></a> 
-        <a href="abiturientska/44.webp" data-fancybox="gallery" data-src="abiturientska/thumb/44.webp"> <img data-src="abiturientska/thumb/44.webp" /></a> 
-
-        <a href="abiturientska/127.webp" data-fancybox="gallery" data-src="abiturientska/thumb/127.webp"> <img data-src="abiturientska/thumb/127.webp" /></a>
-        <a href="abiturientska/128.webp" data-fancybox="gallery" data-src="abiturientska/thumb/128.webp"> <img data-src="abiturientska/thumb/128.webp" /></a>
-        <a href="abiturientska/129.webp" data-fancybox="gallery" data-src="abiturientska/thumb/129.webp"> <img data-src="abiturientska/thumb/129.webp" /></a>
-        <a href="abiturientska/130.webp" data-fancybox="gallery" data-src="abiturientska/thumb/130.webp"> <img data-src="abiturientska/thumb/130.webp" /></a>
-        <a href="abiturientska/131.webp" data-fancybox="gallery" data-src="abiturientska/thumb/131.webp"> <img data-src="abiturientska/thumb/131.webp" /></a>
-        <a href="abiturientska/132.webp" data-fancybox="gallery" data-src="abiturientska/thumb/132.webp"> <img data-src="abiturientska/thumb/132.webp" /></a>
-        <a href="abiturientska/133.webp" data-fancybox="gallery" data-src="abiturientska/thumb/133.webp"> <img data-src="abiturientska/thumb/133.webp" /></a>
-        <a href="abiturientska/134.webp" data-fancybox="gallery" data-src="abiturientska/thumb/134.webp"> <img data-src="abiturientska/thumb/134.webp" /></a>
-        <a href="abiturientska/135.webp" data-fancybox="gallery" data-src="abiturientska/thumb/135.webp"> <img data-src="abiturientska/thumb/135.webp" /></a>
-        <a href="abiturientska/136.webp" data-fancybox="gallery" data-src="abiturientska/thumb/136.webp"> <img data-src="abiturientska/thumb/136.webp" /></a>
-        <a href="abiturientska/137.webp" data-fancybox="gallery" data-src="abiturientska/thumb/137.webp"> <img data-src="abiturientska/thumb/137.webp" /></a>
-        <a href="abiturientska/138.webp" data-fancybox="gallery" data-src="abiturientska/thumb/138.webp"> <img data-src="abiturientska/thumb/138.webp" /></a>
-        <a href="abiturientska/139.webp" data-fancybox="gallery" data-src="abiturientska/thumb/139.webp"> <img data-src="abiturientska/thumb/139.webp" /></a>
-        <a href="abiturientska/140.webp" data-fancybox="gallery" data-src="abiturientska/thumb/140.webp"> <img data-src="abiturientska/thumb/140.webp" /></a>
-        <a href="abiturientska/141.webp" data-fancybox="gallery" data-src="abiturientska/thumb/141.webp"> <img data-src="abiturientska/thumb/141.webp" /></a>
-        <a href="abiturientska/142.webp" data-fancybox="gallery" data-src="abiturientska/thumb/142.webp"> <img data-src="abiturientska/thumb/142.webp" /></a>
-        <a href="abiturientska/143.webp" data-fancybox="gallery" data-src="abiturientska/thumb/143.webp"> <img data-src="abiturientska/thumb/143.webp" /></a>
-        <a href="abiturientska/144.webp" data-fancybox="gallery" data-src="abiturientska/thumb/144.webp"> <img data-src="abiturientska/thumb/144.webp" /></a>
-        <a href="abiturientska/145.webp" data-fancybox="gallery" data-src="abiturientska/thumb/145.webp"> <img data-src="abiturientska/thumb/145.webp" /></a>
-        <a href="abiturientska/146.webp" data-fancybox="gallery" data-src="abiturientska/thumb/146.webp"> <img data-src="abiturientska/thumb/146.webp" /></a>
-        <a href="abiturientska/147.webp" data-fancybox="gallery" data-src="abiturientska/thumb/147.webp"> <img data-src="abiturientska/thumb/147.webp" /></a>
-        <a href="abiturientska/148.webp" data-fancybox="gallery" data-src="abiturientska/thumb/148.webp"> <img data-src="abiturientska/thumb/148.webp" /></a>
-        <a href="abiturientska/149.webp" data-fancybox="gallery" data-src="abiturientska/thumb/149.webp"> <img data-src="abiturientska/thumb/149.webp" /></a>
-        <a href="abiturientska/150.webp" data-fancybox="gallery" data-src="abiturientska/thumb/150.webp"> <img data-src="abiturientska/thumb/150.webp" /></a>
-        <a href="abiturientska/151.webp" data-fancybox="gallery" data-src="abiturientska/thumb/151.webp"> <img data-src="abiturientska/thumb/151.webp" /></a>
-        <a href="abiturientska/152.webp" data-fancybox="gallery" data-src="abiturientska/thumb/152.webp"> <img data-src="abiturientska/thumb/152.webp" /></a>
-
+        <a href="abiturientska/9.webp" data-fancybox="gallery" data-src="abiturientska/thumb/9.webp"> <img data-src="abiturientska/thumb/9.webp" /></a>
+        <a href="abiturientska/10.webp" data-fancybox="gallery" data-src="abiturientska/thumb/10.webp"> <img data-src="abiturientska/thumb/10.webp" /></a>
+        <a href="abiturientska/11.webp" data-fancybox="gallery" data-src="abiturientska/thumb/11.webp"> <img data-src="abiturientska/thumb/11.webp" /></a>
+        <a href="abiturientska/12.webp" data-fancybox="gallery" data-src="abiturientska/thumb/12.webp"> <img data-src="abiturientska/thumb/12.webp" /></a>
+        <a href="abiturientska/13.webp" data-fancybox="gallery" data-src="abiturientska/thumb/13.webp"> <img data-src="abiturientska/thumb/13.webp" /></a>
+        <a href="abiturientska/14.webp" data-fancybox="gallery" data-src="abiturientska/thumb/14.webp"> <img data-src="abiturientska/thumb/14.webp" /></a>
+        <a href="abiturientska/15.webp" data-fancybox="gallery" data-src="abiturientska/thumb/15.webp"> <img data-src="abiturientska/thumb/15.webp" /></a>
+        <a href="abiturientska/16.webp" data-fancybox="gallery" data-src="abiturientska/thumb/16.webp"> <img data-src="abiturientska/thumb/16.webp" /></a>
+        <a href="abiturientska/17.webp" data-fancybox="gallery" data-src="abiturientska/thumb/17.webp"> <img data-src="abiturientska/thumb/17.webp" /></a>
+        <a href="abiturientska/18.webp" data-fancybox="gallery" data-src="abiturientska/thumb/18.webp"> <img data-src="abiturientska/thumb/18.webp" /></a>
+        <a href="abiturientska/19.webp" data-fancybox="gallery" data-src="abiturientska/thumb/19.webp"> <img data-src="abiturientska/thumb/19.webp" /></a>
+        <a href="abiturientska/20.webp" data-fancybox="gallery" data-src="abiturientska/thumb/20.webp"> <img data-src="abiturientska/thumb/20.webp" /></a>
+        <a href="abiturientska/21.webp" data-fancybox="gallery" data-src="abiturientska/thumb/21.webp"> <img data-src="abiturientska/thumb/21.webp" /></a>
+        <a href="abiturientska/22.webp" data-fancybox="gallery" data-src="abiturientska/thumb/22.webp"> <img data-src="abiturientska/thumb/22.webp" /></a>
+        <a href="abiturientska/23.webp" data-fancybox="gallery" data-src="abiturientska/thumb/23.webp"> <img data-src="abiturientska/thumb/23.webp" /></a>
+        <a href="abiturientska/24.webp" data-fancybox="gallery" data-src="abiturientska/thumb/24.webp"> <img data-src="abiturientska/thumb/24.webp" /></a>
+        <a href="abiturientska/25.webp" data-fancybox="gallery" data-src="abiturientska/thumb/25.webp"> <img data-src="abiturientska/thumb/25.webp" /></a>
+        <a href="abiturientska/26.webp" data-fancybox="gallery" data-src="abiturientska/thumb/26.webp"> <img data-src="abiturientska/thumb/26.webp" /></a>
+        <a href="abiturientska/27.webp" data-fancybox="gallery" data-src="abiturientska/thumb/27.webp"> <img data-src="abiturientska/thumb/27.webp" /></a>
+        <a href="abiturientska/28.webp" data-fancybox="gallery" data-src="abiturientska/thumb/28.webp"> <img data-src="abiturientska/thumb/28.webp" /></a>
+        <a href="abiturientska/29.webp" data-fancybox="gallery" data-src="abiturientska/thumb/29.webp"> <img data-src="abiturientska/thumb/29.webp" /></a>
+        <a href="abiturientska/30.webp" data-fancybox="gallery" data-src="abiturientska/thumb/30.webp"> <img data-src="abiturientska/thumb/30.webp" /></a>
+        <a href="abiturientska/31.webp" data-fancybox="gallery" data-src="abiturientska/thumb/31.webp"> <img data-src="abiturientska/thumb/31.webp" /></a>
+        <a href="abiturientska/32.webp" data-fancybox="gallery" data-src="abiturientska/thumb/32.webp"> <img data-src="abiturientska/thumb/32.webp" /></a>
+        <a href="abiturientska/33.webp" data-fancybox="gallery" data-src="abiturientska/thumb/33.webp"> <img data-src="abiturientska/thumb/33.webp" /></a>
+        <a href="abiturientska/34.webp" data-fancybox="gallery" data-src="abiturientska/thumb/34.webp"> <img data-src="abiturientska/thumb/34.webp" /></a>
+        <a href="abiturientska/35.webp" data-fancybox="gallery" data-src="abiturientska/thumb/35.webp"> <img data-src="abiturientska/thumb/35.webp" /></a>
+        <a href="abiturientska/36.webp" data-fancybox="gallery" data-src="abiturientska/thumb/36.webp"> <img data-src="abiturientska/thumb/36.webp" /></a>
+        <a href="abiturientska/37.webp" data-fancybox="gallery" data-src="abiturientska/thumb/37.webp"> <img data-src="abiturientska/thumb/37.webp" /></a>
+        <a href="abiturientska/38.webp" data-fancybox="gallery" data-src="abiturientska/thumb/38.webp"> <img data-src="abiturientska/thumb/38.webp" /></a>
+        <a href="abiturientska/39.webp" data-fancybox="gallery" data-src="abiturientska/thumb/39.webp"> <img data-src="abiturientska/thumb/39.webp" /></a>
+        <a href="abiturientska/40.webp" data-fancybox="gallery" data-src="abiturientska/thumb/40.webp"> <img data-src="abiturientska/thumb/40.webp" /></a>
+        <a href="abiturientska/41.webp" data-fancybox="gallery" data-src="abiturientska/thumb/41.webp"> <img data-src="abiturientska/thumb/41.webp" /></a>
+        <a href="abiturientska/42.webp" data-fancybox="gallery" data-src="abiturientska/thumb/42.webp"> <img data-src="abiturientska/thumb/42.webp" /></a>
+        <a href="abiturientska/43.webp" data-fancybox="gallery" data-src="abiturientska/thumb/43.webp"> <img data-src="abiturientska/thumb/43.webp" /></a>
+        <a href="abiturientska/44.webp" data-fancybox="gallery" data-src="abiturientska/thumb/44.webp"> <img data-src="abiturientska/thumb/44.webp" /></a>
         <a href="abiturientska/45.webp" data-fancybox="gallery" data-src="abiturientska/thumb/45.webp"> <img data-src="abiturientska/thumb/45.webp" /></a>
         <a href="abiturientska/46.webp" data-fancybox="gallery" data-src="abiturientska/thumb/46.webp"> <img data-src="abiturientska/thumb/46.webp" /></a>
         <a href="abiturientska/47.webp" data-fancybox="gallery" data-src="abiturientska/thumb/47.webp"> <img data-src="abiturientska/thumb/47.webp" /></a>
@@ -602,29 +488,6 @@
         <a href="abiturientska/67.webp" data-fancybox="gallery" data-src="abiturientska/thumb/67.webp"> <img data-src="abiturientska/thumb/67.webp" /></a>
         <a href="abiturientska/68.webp" data-fancybox="gallery" data-src="abiturientska/thumb/68.webp"> <img data-src="abiturientska/thumb/68.webp" /></a>
         <a href="abiturientska/69.webp" data-fancybox="gallery" data-src="abiturientska/thumb/69.webp"> <img data-src="abiturientska/thumb/69.webp" /></a>
-
-        <a href="abiturientska/153.webp" data-fancybox="gallery" data-src="abiturientska/thumb/153.webp"> <img data-src="abiturientska/thumb/153.webp" /></a>
-        <a href="abiturientska/154.webp" data-fancybox="gallery" data-src="abiturientska/thumb/154.webp"> <img data-src="abiturientska/thumb/154.webp" /></a>
-        <a href="abiturientska/155.webp" data-fancybox="gallery" data-src="abiturientska/thumb/155.webp"> <img data-src="abiturientska/thumb/155.webp" /></a>
-        <a href="abiturientska/156.webp" data-fancybox="gallery" data-src="abiturientska/thumb/156.webp"> <img data-src="abiturientska/thumb/156.webp" /></a>
-        <a href="abiturientska/157.webp" data-fancybox="gallery" data-src="abiturientska/thumb/157.webp"> <img data-src="abiturientska/thumb/157.webp" /></a>
-        <a href="abiturientska/158.webp" data-fancybox="gallery" data-src="abiturientska/thumb/158.webp"> <img data-src="abiturientska/thumb/158.webp" /></a>
-
-        <a id="0400" href="https://youtu.be/98H8TFLLpUY" data-fancybox="gallery" data-width="1550" data-height="1000" data-src="https://images-ext-2.discordapp.net/external/OqulaubKE6qgIZ6uHvEU4WgYYH0LrqTG79SoyVrA19A/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBMKEswDw%3D%3D%26rs%3DAOn4CLD38aQS4zKtDYV01JXP625TFWF-Hg/https/i9.ytimg.com/vi/98H8TFLLpUY/mqdefault.jpg?width=383&height=215">
-          <img data-src="https://images-ext-2.discordapp.net/external/OqulaubKE6qgIZ6uHvEU4WgYYH0LrqTG79SoyVrA19A/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBMKEswDw%3D%3D%26rs%3DAOn4CLD38aQS4zKtDYV01JXP625TFWF-Hg/https/i9.ytimg.com/vi/98H8TFLLpUY/mqdefault.jpg?width=383&height=215">
-        </a>
-        <a id="0500" href="https://youtu.be/jNJrPky-K3g" data-fancybox="gallery" data-width="1550" data-height="1000" data-src="https://images-ext-2.discordapp.net/external/fLvznLwJb49tMb4kJ8M3gMVxw5tTV_rN850IrnwSq2A/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBNKFYwDw%3D%3D%26rs%3DAOn4CLAKrBi-8Z1RXWuIpUTV2vIRto_hCA/https/i9.ytimg.com/vi/jNJrPky-K3g/mqdefault.jpg?width=383&height=215">
-          <img data-src="https://images-ext-2.discordapp.net/external/fLvznLwJb49tMb4kJ8M3gMVxw5tTV_rN850IrnwSq2A/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBNKFYwDw%3D%3D%26rs%3DAOn4CLAKrBi-8Z1RXWuIpUTV2vIRto_hCA/https/i9.ytimg.com/vi/jNJrPky-K3g/mqdefault.jpg?width=383&height=215">
-        </a>
-
-        <a href="abiturientska/159.webp" data-fancybox="gallery" data-src="abiturientska/thumb/159.webp"> <img data-src="abiturientska/thumb/159.webp" /></a>
-        <a href="abiturientska/160.webp" data-fancybox="gallery" data-src="abiturientska/thumb/160.webp"> <img data-src="abiturientska/thumb/160.webp" /></a>
-        <a href="abiturientska/161.webp" data-fancybox="gallery" data-src="abiturientska/thumb/161.webp"> <img data-src="abiturientska/thumb/161.webp" /></a>
-        <a href="abiturientska/162.webp" data-fancybox="gallery" data-src="abiturientska/thumb/162.webp"> <img data-src="abiturientska/thumb/162.webp" /></a>
-        <a href="abiturientska/163.webp" data-fancybox="gallery" data-src="abiturientska/thumb/163.webp"> <img data-src="abiturientska/thumb/163.webp" /></a>
-        <a href="abiturientska/164.webp" data-fancybox="gallery" data-src="abiturientska/thumb/164.webp"> <img data-src="abiturientska/thumb/164.webp" /></a>
-        <a href="abiturientska/165.webp" data-fancybox="gallery" data-src="abiturientska/thumb/165.webp"> <img data-src="abiturientska/thumb/165.webp" /></a>
-
         <a href="abiturientska/70.webp" data-fancybox="gallery" data-src="abiturientska/thumb/70.webp"> <img data-src="abiturientska/thumb/70.webp" /></a>
         <a href="abiturientska/71.webp" data-fancybox="gallery" data-src="abiturientska/thumb/71.webp"> <img data-src="abiturientska/thumb/71.webp" /></a>
         <a href="abiturientska/72.webp" data-fancybox="gallery" data-src="abiturientska/thumb/72.webp"> <img data-src="abiturientska/thumb/72.webp" /></a>
@@ -661,6 +524,14 @@
         <a href="abiturientska/103.webp" data-fancybox="gallery" data-src="abiturientska/thumb/103.webp"> <img data-src="abiturientska/thumb/103.webp" /></a>
         <a href="abiturientska/104.webp" data-fancybox="gallery" data-src="abiturientska/thumb/104.webp"> <img data-src="abiturientska/thumb/104.webp" /></a>
         <a href="abiturientska/105.webp" data-fancybox="gallery" data-src="abiturientska/thumb/105.webp"> <img data-src="abiturientska/thumb/105.webp" /></a>
+
+        <a id="0400" href="https://youtu.be/98H8TFLLpUY" data-fancybox="gallery" data-width="1550" data-height="1000" data-src="https://images-ext-2.discordapp.net/external/OqulaubKE6qgIZ6uHvEU4WgYYH0LrqTG79SoyVrA19A/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBMKEswDw%3D%3D%26rs%3DAOn4CLD38aQS4zKtDYV01JXP625TFWF-Hg/https/i9.ytimg.com/vi/98H8TFLLpUY/mqdefault.jpg?width=383&height=215">
+          <img data-src="https://images-ext-2.discordapp.net/external/OqulaubKE6qgIZ6uHvEU4WgYYH0LrqTG79SoyVrA19A/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBMKEswDw%3D%3D%26rs%3DAOn4CLD38aQS4zKtDYV01JXP625TFWF-Hg/https/i9.ytimg.com/vi/98H8TFLLpUY/mqdefault.jpg?width=383&height=215">
+        </a>
+        <a id="0500" href="https://youtu.be/jNJrPky-K3g" data-fancybox="gallery" data-width="1550" data-height="1000" data-src="https://images-ext-2.discordapp.net/external/fLvznLwJb49tMb4kJ8M3gMVxw5tTV_rN850IrnwSq2A/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBNKFYwDw%3D%3D%26rs%3DAOn4CLAKrBi-8Z1RXWuIpUTV2vIRto_hCA/https/i9.ytimg.com/vi/jNJrPky-K3g/mqdefault.jpg?width=383&height=215">
+          <img data-src="https://images-ext-2.discordapp.net/external/fLvznLwJb49tMb4kJ8M3gMVxw5tTV_rN850IrnwSq2A/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBNKFYwDw%3D%3D%26rs%3DAOn4CLAKrBi-8Z1RXWuIpUTV2vIRto_hCA/https/i9.ytimg.com/vi/jNJrPky-K3g/mqdefault.jpg?width=383&height=215">
+        </a>
+
         <a href="abiturientska/106.webp" data-fancybox="gallery" data-src="abiturientska/thumb/106.webp"> <img data-src="abiturientska/thumb/106.webp" /></a>
         <a href="abiturientska/107.webp" data-fancybox="gallery" data-src="abiturientska/thumb/107.webp"> <img data-src="abiturientska/thumb/107.webp" /></a>
         <a href="abiturientska/108.webp" data-fancybox="gallery" data-src="abiturientska/thumb/108.webp"> <img data-src="abiturientska/thumb/108.webp" /></a>
@@ -674,6 +545,68 @@
         <a href="abiturientska/116.webp" data-fancybox="gallery" data-src="abiturientska/thumb/116.webp"> <img data-src="abiturientska/thumb/116.webp" /></a>
         <a href="abiturientska/117.webp" data-fancybox="gallery" data-src="abiturientska/thumb/117.webp"> <img data-src="abiturientska/thumb/117.webp" /></a>
         <a href="abiturientska/118.webp" data-fancybox="gallery" data-src="abiturientska/thumb/118.webp"> <img data-src="abiturientska/thumb/118.webp" /></a>
+        <a href="abiturientska/119.webp" data-fancybox="gallery" data-src="abiturientska/thumb/119.webp"> <img data-src="abiturientska/thumb/119.webp" /></a>
+        <a href="abiturientska/120.webp" data-fancybox="gallery" data-src="abiturientska/thumb/120.webp"> <img data-src="abiturientska/thumb/120.webp" /></a>
+        <a href="abiturientska/121.webp" data-fancybox="gallery" data-src="abiturientska/thumb/121.webp"> <img data-src="abiturientska/thumb/121.webp" /></a>
+        <a href="abiturientska/122.webp" data-fancybox="gallery" data-src="abiturientska/thumb/122.webp"> <img data-src="abiturientska/thumb/122.webp" /></a>
+        <a href="abiturientska/123.webp" data-fancybox="gallery" data-src="abiturientska/thumb/123.webp"> <img data-src="abiturientska/thumb/123.webp" /></a>
+        <a href="abiturientska/124.webp" data-fancybox="gallery" data-src="abiturientska/thumb/124.webp"> <img data-src="abiturientska/thumb/124.webp" /></a>
+        <a href="abiturientska/125.webp" data-fancybox="gallery" data-src="abiturientska/thumb/125.webp"> <img data-src="abiturientska/thumb/125.webp" /></a>
+        <a href="abiturientska/126.webp" data-fancybox="gallery" data-src="abiturientska/thumb/126.webp"> <img data-src="abiturientska/thumb/126.webp" /></a>
+        <a href="abiturientska/127.webp" data-fancybox="gallery" data-src="abiturientska/thumb/127.webp"> <img data-src="abiturientska/thumb/127.webp" /></a>
+        <a href="abiturientska/128.webp" data-fancybox="gallery" data-src="abiturientska/thumb/128.webp"> <img data-src="abiturientska/thumb/128.webp" /></a>
+        <a href="abiturientska/129.webp" data-fancybox="gallery" data-src="abiturientska/thumb/129.webp"> <img data-src="abiturientska/thumb/129.webp" /></a>
+        <a href="abiturientska/130.webp" data-fancybox="gallery" data-src="abiturientska/thumb/130.webp"> <img data-src="abiturientska/thumb/130.webp" /></a>
+        <a href="abiturientska/131.webp" data-fancybox="gallery" data-src="abiturientska/thumb/131.webp"> <img data-src="abiturientska/thumb/131.webp" /></a>
+        <a href="abiturientska/132.webp" data-fancybox="gallery" data-src="abiturientska/thumb/132.webp"> <img data-src="abiturientska/thumb/132.webp" /></a>
+        <a href="abiturientska/133.webp" data-fancybox="gallery" data-src="abiturientska/thumb/133.webp"> <img data-src="abiturientska/thumb/133.webp" /></a>
+        <a href="abiturientska/134.webp" data-fancybox="gallery" data-src="abiturientska/thumb/134.webp"> <img data-src="abiturientska/thumb/134.webp" /></a>
+        <a href="abiturientska/135.webp" data-fancybox="gallery" data-src="abiturientska/thumb/135.webp"> <img data-src="abiturientska/thumb/135.webp" /></a>
+        <a href="abiturientska/136.webp" data-fancybox="gallery" data-src="abiturientska/thumb/136.webp"> <img data-src="abiturientska/thumb/136.webp" /></a>
+        <a href="abiturientska/137.webp" data-fancybox="gallery" data-src="abiturientska/thumb/137.webp"> <img data-src="abiturientska/thumb/137.webp" /></a>
+        <a href="abiturientska/138.webp" data-fancybox="gallery" data-src="abiturientska/thumb/138.webp"> <img data-src="abiturientska/thumb/138.webp" /></a>
+        <a href="abiturientska/139.webp" data-fancybox="gallery" data-src="abiturientska/thumb/139.webp"> <img data-src="abiturientska/thumb/139.webp" /></a>
+        <a href="abiturientska/140.webp" data-fancybox="gallery" data-src="abiturientska/thumb/140.webp"> <img data-src="abiturientska/thumb/140.webp" /></a>
+        <a href="abiturientska/141.webp" data-fancybox="gallery" data-src="abiturientska/thumb/141.webp"> <img data-src="abiturientska/thumb/141.webp" /></a>
+        <a href="abiturientska/142.webp" data-fancybox="gallery" data-src="abiturientska/thumb/142.webp"> <img data-src="abiturientska/thumb/142.webp" /></a>
+        <a href="abiturientska/143.webp" data-fancybox="gallery" data-src="abiturientska/thumb/143.webp"> <img data-src="abiturientska/thumb/143.webp" /></a>
+        <a href="abiturientska/144.webp" data-fancybox="gallery" data-src="abiturientska/thumb/144.webp"> <img data-src="abiturientska/thumb/144.webp" /></a>
+        <a href="abiturientska/145.webp" data-fancybox="gallery" data-src="abiturientska/thumb/145.webp"> <img data-src="abiturientska/thumb/145.webp" /></a>
+        <a href="abiturientska/146.webp" data-fancybox="gallery" data-src="abiturientska/thumb/146.webp"> <img data-src="abiturientska/thumb/146.webp" /></a>
+        <a href="abiturientska/147.webp" data-fancybox="gallery" data-src="abiturientska/thumb/147.webp"> <img data-src="abiturientska/thumb/147.webp" /></a>
+        <a href="abiturientska/148.webp" data-fancybox="gallery" data-src="abiturientska/thumb/148.webp"> <img data-src="abiturientska/thumb/148.webp" /></a>
+        <a href="abiturientska/149.webp" data-fancybox="gallery" data-src="abiturientska/thumb/149.webp"> <img data-src="abiturientska/thumb/149.webp" /></a>
+        <a href="abiturientska/150.webp" data-fancybox="gallery" data-src="abiturientska/thumb/150.webp"> <img data-src="abiturientska/thumb/150.webp" /></a>
+        <a href="abiturientska/151.webp" data-fancybox="gallery" data-src="abiturientska/thumb/151.webp"> <img data-src="abiturientska/thumb/151.webp" /></a>
+        <a href="abiturientska/152.webp" data-fancybox="gallery" data-src="abiturientska/thumb/152.webp"> <img data-src="abiturientska/thumb/152.webp" /></a>
+        <a href="abiturientska/153.webp" data-fancybox="gallery" data-src="abiturientska/thumb/153.webp"> <img data-src="abiturientska/thumb/153.webp" /></a>
+        <a href="abiturientska/154.webp" data-fancybox="gallery" data-src="abiturientska/thumb/154.webp"> <img data-src="abiturientska/thumb/154.webp" /></a>
+        <a href="abiturientska/155.webp" data-fancybox="gallery" data-src="abiturientska/thumb/155.webp"> <img data-src="abiturientska/thumb/155.webp" /></a>
+        <a href="abiturientska/156.webp" data-fancybox="gallery" data-src="abiturientska/thumb/156.webp"> <img data-src="abiturientska/thumb/156.webp" /></a>
+        <a href="abiturientska/157.webp" data-fancybox="gallery" data-src="abiturientska/thumb/157.webp"> <img data-src="abiturientska/thumb/157.webp" /></a>
+        <a href="abiturientska/158.webp" data-fancybox="gallery" data-src="abiturientska/thumb/158.webp"> <img data-src="abiturientska/thumb/158.webp" /></a>
+        <a href="abiturientska/159.webp" data-fancybox="gallery" data-src="abiturientska/thumb/159.webp"> <img data-src="abiturientska/thumb/159.webp" /></a>
+        <a href="abiturientska/160.webp" data-fancybox="gallery" data-src="abiturientska/thumb/160.webp"> <img data-src="abiturientska/thumb/160.webp" /></a>
+        <a href="abiturientska/161.webp" data-fancybox="gallery" data-src="abiturientska/thumb/161.webp"> <img data-src="abiturientska/thumb/161.webp" /></a>
+        <a href="abiturientska/162.webp" data-fancybox="gallery" data-src="abiturientska/thumb/162.webp"> <img data-src="abiturientska/thumb/162.webp" /></a>
+        <a href="abiturientska/163.webp" data-fancybox="gallery" data-src="abiturientska/thumb/163.webp"> <img data-src="abiturientska/thumb/163.webp" /></a>
+
+        <a id="1700" href="https://youtu.be/2Dno43-KX9I"data-fancybox="gallery" data-width="1550" data-height="1000" data-src="https://images-ext-1.discordapp.net/external/i2kIt1qaTaAJzC9tF4fTAVe51EOQiIfzY26pK5InFgk/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYXiBlKDQwDw%3D%3D%26rs%3DAOn4CLCmYhop59FcUAtPn1FRvPgHwjcTqQ/https/i9.ytimg.com/vi/2Dno43-KX9I/mqdefault.jpg?width=383&height=215">
+          <img data-src="https://images-ext-1.discordapp.net/external/i2kIt1qaTaAJzC9tF4fTAVe51EOQiIfzY26pK5InFgk/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYXiBlKDQwDw%3D%3D%26rs%3DAOn4CLCmYhop59FcUAtPn1FRvPgHwjcTqQ/https/i9.ytimg.com/vi/2Dno43-KX9I/mqdefault.jpg?width=383&height=215">
+        </a>
+
+        <a href="abiturientska/164.webp" data-fancybox="gallery" data-src="abiturientska/thumb/164.webp"> <img data-src="abiturientska/thumb/164.webp" /></a>
+
+        <a href="abiturientska/165.webp" data-fancybox="gallery" data-src="abiturientska/thumb/165.webp"> <img data-src="abiturientska/thumb/165.webp" /></a>
+        <a href="abiturientska/166.webp" data-fancybox="gallery" data-src="abiturientska/thumb/166.webp"> <img data-src="abiturientska/thumb/166.webp" /></a>
+        <a href="abiturientska/167.webp" data-fancybox="gallery" data-src="abiturientska/thumb/167.webp"> <img data-src="abiturientska/thumb/167.webp" /></a>
+        <a href="abiturientska/168.webp" data-fancybox="gallery" data-src="abiturientska/thumb/168.webp"> <img data-src="abiturientska/thumb/168.webp" /></a>
+        <a href="abiturientska/169.webp" data-fancybox="gallery" data-src="abiturientska/thumb/169.webp"> <img data-src="abiturientska/thumb/169.webp" /></a>
+        <a href="abiturientska/170.webp" data-fancybox="gallery" data-src="abiturientska/thumb/170.webp"> <img data-src="abiturientska/thumb/170.webp" /></a>
+        <a href="abiturientska/171.webp" data-fancybox="gallery" data-src="abiturientska/thumb/171.webp"> <img data-src="abiturientska/thumb/171.webp" /></a>
+       
+
+
 
         <a id="0600" href="https://youtu.be/Iy0VXeSFVqY" data-fancybox="gallery" data-width="1550" data-height="1000" data-src="https://images-ext-2.discordapp.net/external/kqQGOZ6d2I-s92kU8FbqfIOXNONuta3vSsgVlodhmCA/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYeyAyKH8wDw%3D%3D%26rs%3DAOn4CLDqxgwWQuoC8ogfQfFTAjvaKb0Qpg/https/i9.ytimg.com/vi/Iy0VXeSFVqY/mqdefault.jpg?width=383&height=215">
           <img data-src="https://images-ext-2.discordapp.net/external/kqQGOZ6d2I-s92kU8FbqfIOXNONuta3vSsgVlodhmCA/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYeyAyKH8wDw%3D%3D%26rs%3DAOn4CLDqxgwWQuoC8ogfQfFTAjvaKb0Qpg/https/i9.ytimg.com/vi/Iy0VXeSFVqY/mqdefault.jpg?width=383&height=215">
@@ -702,24 +635,9 @@
           <img data-src="https://images-ext-1.discordapp.net/external/tqr3bx5f2r8D2_zpPLwxOy2Q9WenH8RaxN_nqhPCBg0/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYfyA2KF0wDw%3D%3D%26rs%3DAOn4CLB_kAbWWT6OzuKId18yM7wLBhr2Rg/https/i9.ytimg.com/vi/tT1im6ZDk3I/mqdefault.jpg?width=383&height=215">
         </a>
 
-        <a href="abiturientska/1300.webp" data-fancybox="gallery" data-src="abiturientska/1300.webp"> <img data-src="abiturientska/1300.webp" /></a>
-        <a href="abiturientska/1400.webp" data-fancybox="gallery" data-src="abiturientska/1400.webp"> <img data-src="abiturientska/1400.webp" /></a>
-        <a href="abiturientska/1500.webp" data-fancybox="gallery" data-src="abiturientska/1500.webp"> <img data-src="abiturientska/1500.webp" /></a>
-        <a href="abiturientska/1600.webp" data-fancybox="gallery" data-src="abiturientska/1600.webp"> <img data-src="abiturientska/1600.webp" /></a>
+        <a href="abiturientska/172.webp" data-fancybox="gallery" data-src="abiturientska/thumb/172.webp"> <img data-src="abiturientska/thumb/172.webp" /></a>
+        <a href="abiturientska/173.webp" data-fancybox="gallery" data-src="abiturientska/thumb/173.webp"> <img data-src="abiturientska/thumb/173.webp" /></a>
 
-        <a id="1700" href="https://youtu.be/2Dno43-KX9I"data-fancybox="gallery" data-width="1550" data-height="1000" data-src="https://images-ext-1.discordapp.net/external/i2kIt1qaTaAJzC9tF4fTAVe51EOQiIfzY26pK5InFgk/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYXiBlKDQwDw%3D%3D%26rs%3DAOn4CLCmYhop59FcUAtPn1FRvPgHwjcTqQ/https/i9.ytimg.com/vi/2Dno43-KX9I/mqdefault.jpg?width=383&height=215">
-          <img data-src="https://images-ext-1.discordapp.net/external/i2kIt1qaTaAJzC9tF4fTAVe51EOQiIfzY26pK5InFgk/%3Fsqp%3DCIzOxaQG-oaymwEoCMACELQB8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYXiBlKDQwDw%3D%3D%26rs%3DAOn4CLCmYhop59FcUAtPn1FRvPgHwjcTqQ/https/i9.ytimg.com/vi/2Dno43-KX9I/mqdefault.jpg?width=383&height=215">
-        </a>
-
-        <a href="abiturientska/1800.webp" data-fancybox="gallery" data-src="abiturientska/1800.webp"> <img data-src="abiturientska/1800.webp" /></a>
-        <a href="abiturientska/1900.webp" data-fancybox="gallery" data-src="abiturientska/1900.webp"> <img data-src="abiturientska/1900.webp" /></a>
-        <a href="abiturientska/2000.webp" data-fancybox="gallery" data-src="abiturientska/2000.webp"> <img data-src="abiturientska/2000.webp" /></a>
-        <a href="abiturientska/2100.webp" data-fancybox="gallery" data-src="abiturientska/2100.webp"> <img data-src="abiturientska/2100.webp" /></a>
-
-        <!-- <a href="abiturientska/126.webp" data-ngthumb="abiturientska/thumb/126.webp"></a> -->
-
-        <a href="abiturientska/2200.webp" data-fancybox="gallery" data-src="abiturientska/2200.webp"> <img data-src="abiturientska/2200.webp" /></a>
-        <a href="abiturientska/2300.webp" data-fancybox="gallery" data-src="abiturientska/2300.webp"> <img data-src="abiturientska/2300.webp" /></a>
 
       </div>
       
@@ -727,7 +645,6 @@
         Fancybox.bind('[data-fancybox="gallery"]', {
           // Your custom options
         });
-
 
       </script>
 

@@ -326,7 +326,7 @@
           <span class="button-text">ИЗТЕГЛИ ВСИЧКИ СНИМКИ</span>
         </a>
       </button>
-      <h4 style="color: white;">При проблем със снимките натисни CTRL + F5</h2>
+      <!-- <h4 style="color: white;">При проблем със снимките натисни CTRL + F5</h2> -->
       <style>
         .download-button {
           margin: 25px;
@@ -406,12 +406,12 @@
         </div>
       </div> -->
 
-      <div class="image-grid">
+      <div class="image-grid fancybox">
     
-        <a href="abiturientska/1.webp" data-fancybox="gallery" data-src="abiturientska/thumb/1.webp"> <img data-src="abiturientska/thumb/1.webp" /></a>
-        <a href="abiturientska/2.webp" data-fancybox="gallery" data-src="abiturientska/thumb/2.webp"> <img data-src="abiturientska/thumb/2.webp" /></a>
-        <a href="abiturientska/3.webp" data-fancybox="gallery" data-src="abiturientska/thumb/3.webp"> <img data-src="abiturientska/thumb/3.webp" /></a>
-        <a href="abiturientska/4.webp" data-fancybox="gallery" data-src="abiturientska/thumb/4.webp"> <img data-src="abiturientska/thumb/4.webp" /></a>
+        <a class="fancybox" href="abiturientska/1.webp" data-fancybox="gallery" data-src="abiturientska/thumb/1.webp"> <img data-src="abiturientska/thumb/1.webp" /></a>
+        <a class="fancybox" href="abiturientska/2.webp" data-fancybox="gallery" data-src="abiturientska/thumb/2.webp"> <img data-src="abiturientska/thumb/2.webp" /></a>
+        <a class="fancybox" href="abiturientska/3.webp" data-fancybox="gallery" data-src="abiturientska/thumb/3.webp"> <img data-src="abiturientska/thumb/3.webp" /></a>
+        <a class="fancybox" href="abiturientska/4.webp" data-fancybox="gallery" data-src="abiturientska/thumb/4.webp"> <img data-src="abiturientska/thumb/4.webp" /></a>
         <a href="abiturientska/5.webp" data-fancybox="gallery" data-src="abiturientska/thumb/5.webp"> <img data-src="abiturientska/thumb/5.webp" /></a>
         <a href="abiturientska/6.webp" data-fancybox="gallery" data-src="abiturientska/thumb/6.webp"> <img data-src="abiturientska/thumb/6.webp" /></a>
 <!-- 
@@ -640,9 +640,31 @@
       </div>
       
       <script>
+      /*  $(document).ready(function() {
+          $(".fancybox").fancybox({
+            // Custom options
+            loop: true, // Enable looping through the gallery
+            arrows: true, // Display navigation arrows
+            infobar: true, // Display the image counter and caption
+            buttons: ["zoom", "slideShow", "fullScreen", "download", "thumbs"], // Display specific buttons
+            animationEffect: "fade", // Set the animation effect
+            transitionEffect: "slide", // Set the transition effect
+            transitionDuration: 500, // Set the duration of the transition (in milliseconds)
+            autoFocus: false, // Disable automatic focus on the first focusable element
+            trapFocus: false, // Disable trapping focus within the lightbox
+            touch: true, // Enable touch gestures
+            idleTime: 3000, // Set the idle time (in milliseconds) before closing the lightbox
+            keyboard: true, // Enable keyboard navigation
+            lang: "en", // Set the language for button tooltips and messages
+            // Add more custom options as needed
+          });
+        }); */
+
+        
+
         Fancybox.bind('[data-fancybox="gallery"]', {
           // Your custom options
-
+          hideScrollbar: "false",
           animated: "false",
           autoFocus: "false",
           trapFocus: "false",
